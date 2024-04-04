@@ -1,7 +1,7 @@
-import * as React from 'react';
+import TestPage from '../../pages/TestPage';
 
 function App() {
-  return <div>hello, word</div>;
+  return <TestPage />;
 }
 
 export default App;
