@@ -1,0 +1,12 @@
+:root {
+  --header-color: rgb(75, 166, 238);
+  --hero-color: rgb(193, 60, 44);
+  --content-color: rgb(71, 152, 55);
+  --sidebar-color: rgb(97, 60, 176);
+  --footer-color: rgb(97, 97, 97);
+  --background-color: rgb(43, 43, 43);
+}
+
+.fullHeightWrapper {
+  min-height: 100%;
+}
