@@ -1,7 +1,7 @@
-import TestPage from '../../pages/TestPage';
+import Layout from "../Layout";
 
 function App() {
-  return <TestPage />;
+  return <Layout />;
 }
 
 export default App;

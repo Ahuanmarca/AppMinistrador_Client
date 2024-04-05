@@ -1,5 +1,6 @@
 // import * as React from 'react';
 import style from './Layout.module.css';
+import GridLayout from '../GridLayout';
 
 function Layout() {
   return (
@@ -11,7 +12,7 @@ function Layout() {
       </header>
       <main className={style.dashboardContainer}>
         <div className={style.box}>
-          Dashboard
+          <GridLayout />
         </div>
       </main>
       <aside className={style.sidebarContainer}>
