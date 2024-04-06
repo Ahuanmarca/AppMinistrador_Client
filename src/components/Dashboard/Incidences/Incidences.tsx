@@ -1,10 +1,9 @@
 // import * as React from 'react';
+import DashboardPlaceholder from "../DashboardPlaceholder";
 
 function Incidences() {
   return (
-    <div className="dashboardPlaceholder">
-      Incidencias
-    </div>
+    <DashboardPlaceholder placeholderText={"Incidencias"} />
   );
 }
 

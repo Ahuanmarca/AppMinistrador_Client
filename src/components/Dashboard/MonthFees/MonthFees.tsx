@@ -1,10 +1,9 @@
 // import * as React from 'react';
+import DashboardPlaceholder from "../DashboardPlaceholder";
 
 function MonthFees() {
   return (
-    <div className="dashboardPlaceholder">
-      Cuotas del mes
-    </div>
+    <DashboardPlaceholder placeholderText={"Cuotas del mes"} />
   );
 }
 

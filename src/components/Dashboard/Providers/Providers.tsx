@@ -1,10 +1,9 @@
 // import * as React from 'react';
+import DashboardPlaceholder from "../DashboardPlaceholder";
 
 function Providers() {
   return (
-    <div className="dashboardPlaceholder">
-      Proveedores
-    </div>
+    <DashboardPlaceholder placeholderText={"Proveedores"} />
   );
 }
 

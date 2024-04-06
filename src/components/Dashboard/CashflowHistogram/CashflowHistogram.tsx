@@ -1,10 +1,9 @@
 // import * as React from 'react';
+import DashboardPlaceholder from "../DashboardPlaceholder";
 
 function CashflowHistogram() {
   return (
-    <div className="dashboardPlaceholder">
-      Ingresos vs. gastos
-    </div>
+    <DashboardPlaceholder placeholderText={"Ingresos vs. gastos"} /> 
   );
 }
 

@@ -1,10 +1,9 @@
 // import * as React from 'react';
+import DashboardPlaceholder from "../DashboardPlaceholder";
 
 function PeopleCard({placeholderText}) {
   return (
-    <div className="dashboardPlaceholder">
-      {placeholderText}
-    </div>
+    <DashboardPlaceholder placeholderText={placeholderText} />
   );
 }
 

@@ -1,14 +1,13 @@
 // import * as React from 'react';
 import style from './Layout.module.css';
 import Dashboard from '../Dashboard';
+import LayoutPlaceholder from './LayoutPlaceholder';
 
 function Layout() {
   return (
     <div className={style.layoutContainer}>
       <header className={style.headerContainer}>
-        <div className={style.box}>
-            Appbar
-        </div>
+        <LayoutPlaceholder placeholderText={'Appbar'} />
       </header>
       <main className={style.dashboardContainer}>
         <div className={style.box}>
@@ -16,14 +15,10 @@ function Layout() {
         </div>
       </main>
       <aside className={style.sidebarContainer}>
-        <div className={style.box}>
-          Sidebar
-        </div>
+        <LayoutPlaceholder placeholderText={'Sidebar'} />
       </aside>
       <footer className={style.footerContainer}>
-        <div className={style.box}>
-          Footer
-        </div>
+        <LayoutPlaceholder placeholderText={'Footer'} />
       </footer>
     </div>
   );
