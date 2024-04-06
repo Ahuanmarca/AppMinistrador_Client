@@ -1,7 +1,11 @@
 // import * as React from 'react';
 
 function Providers() {
-  return <div></div>;
+  return (
+    <div className="dashboardPlaceholder">
+      Proveedores
+    </div>
+  );
 }
 
 export default Providers;

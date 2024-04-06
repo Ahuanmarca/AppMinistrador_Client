@@ -1,4 +1,11 @@
 :root {
+  /* from react-resizable-panels library */
+  --color-resize-bar-drag: #39414d;
+  --color-resize-bar-hover: #39414d66;
+  --color-solid-resize-bar: #39414d;
+  /* --color-panel-background: #192230; */
+  --color-panel-background-alternate: #202124;
+
   --header-color: rgb(75, 166, 238);
   --hero-color: rgb(193, 60, 44);
   --content-color: rgb(71, 152, 55);
@@ -7,6 +14,13 @@
   --background-color: rgb(43, 43, 43);
 }
 
-.fullHeightWrapper {
-  min-height: 100%;
+.dashboardPlaceholder {
+  width: 100%;
+  height: 100%;
+  border: 1px dotted hotpink;
+  /* background-color: cornflowerblue; */
 }
+
+/* .fullHeightWrapper { */
+  /* min-height: 100%; */
+/* } */

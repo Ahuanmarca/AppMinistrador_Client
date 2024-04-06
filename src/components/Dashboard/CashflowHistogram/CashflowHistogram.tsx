@@ -1,7 +1,11 @@
 // import * as React from 'react';
 
 function CashflowHistogram() {
-  return <div></div>;
+  return (
+    <div className="dashboardPlaceholder">
+      Ingresos vs. gastos
+    </div>
+  );
 }
 
 export default CashflowHistogram;

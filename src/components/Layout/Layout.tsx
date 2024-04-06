@@ -1,18 +1,18 @@
 // import * as React from 'react';
 import style from './Layout.module.css';
-import GridLayout from '../GridLayout';
+import Dashboard from '../Dashboard';
 
 function Layout() {
   return (
     <div className={style.layoutContainer}>
       <header className={style.headerContainer}>
         <div className={style.box}>
-          Appbar
+            Appbar
         </div>
       </header>
       <main className={style.dashboardContainer}>
         <div className={style.box}>
-          <GridLayout />
+          <Dashboard />
         </div>
       </main>
       <aside className={style.sidebarContainer}>

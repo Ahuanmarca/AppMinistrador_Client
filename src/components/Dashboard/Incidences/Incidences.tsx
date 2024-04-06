@@ -1,7 +1,11 @@
 // import * as React from 'react';
 
 function Incidences() {
-  return <div></div>;
+  return (
+    <div className="dashboardPlaceholder">
+      Incidencias
+    </div>
+  );
 }
 
 export default Incidences;
