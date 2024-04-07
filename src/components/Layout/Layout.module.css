@@ -20,26 +20,17 @@
 
 .headerContainer {
   grid-column: 2/-1;
-  background: #ffcdd2;
 }
 
 .sidebarContainer {
   grid-column: 1/2;
   grid-row: 1/4;
-  background: #e1bee7;
 }
 
 .dashboardContainer {
   grid-column: 2/3;
-  background: #dcedc8;
 }
 
 .footerContainer {
   grid-column: 1/-1;
-  background: #ffecb3;
-}
-
-.box {
-  width: 100%;
-  height: 100%;
 }
