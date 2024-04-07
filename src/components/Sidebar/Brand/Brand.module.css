@@ -1,0 +1,29 @@
+/* Sidebar Brand Styles */
+
+.wrapper {
+  height: 141px;
+  padding-block-start: 41px;
+  padding-inline-start: 29px;
+}
+
+.container {
+  width: 190px;
+  height: 30px;
+  padding-inline-end: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandLogo {
+  height: 100%;
+}
+
+.brandText {
+  font-family: "Readex Pro";
+  color: var(--brand-color-main);
+  font-weight: 400;
+  font-size: 18px;
+  /* line-height: 23.08; */
+}
