@@ -4,6 +4,8 @@ import DashboardIcon from './icons/DashboardIcon';
 import IncidentIcon from './icons/IncidentIcon';
 import FinanceIcon from './icons/FinanceIcon';
 import MessageIcon from './icons/MessageIcon';
+import SettingsIcon from './icons/SettingsIcon';
+import HelpIcon from './icons/HelpIcon';
 import Brand from './Brand';
 import Tab from './Tab';
 
@@ -18,8 +20,8 @@ function Sidebar() {
   ];
 
   const menuItems = [
-    { icon: FinanceIcon, title: 'Configuración', isActive: false },
-    { icon: MessageIcon, title: 'Ayuda', isActive: false },
+    { icon: SettingsIcon, title: 'Configuración', isActive: false },
+    { icon: HelpIcon, title: 'Ayuda', isActive: false },
   ]
 
   function handleTabClick(index: number) {
