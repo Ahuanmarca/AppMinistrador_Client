@@ -2,12 +2,9 @@
   background: white;
   height: 100svh;
   height: 100vh;
-  /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.33); */
   display: grid;
-  /* grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr); */
   grid-template-columns: 248px 1fr;
   grid-template-rows: 101px 1fr min-content;
-  /* gap: 1px; */
 }
 
 @media (max-width: 600px) {
@@ -45,6 +42,4 @@
 .box {
   width: 100%;
   height: 100%;
-  /* border: 4px solid hotpink; */
-  /* padding: 5px; */
 }

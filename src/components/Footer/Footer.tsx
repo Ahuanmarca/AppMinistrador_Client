@@ -1,10 +1,10 @@
 // import * as React from 'react';
 import LayoutPlaceholder from "../Layout/LayoutPlaceholder";
 
-function Appbar() {
+function Footer() {
   return (
-    <LayoutPlaceholder placeholderText={'Appbar'} />
+    <LayoutPlaceholder placeholderText={'Footer'} />
   );
 }
 
-export default Appbar;
+export default Footer;

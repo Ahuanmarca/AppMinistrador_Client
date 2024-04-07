@@ -1,24 +1,25 @@
 // import * as React from 'react';
 import style from './Layout.module.css';
+
 import Dashboard from '../Dashboard';
-import LayoutPlaceholder from './LayoutPlaceholder';
+import Appbar from '../Appbar';
+import Sidebar from '../Sidebar';
+import Footer from '../Footer';
 
 function Layout() {
   return (
     <div className={style.layoutContainer}>
       <header className={style.headerContainer}>
-        <LayoutPlaceholder placeholderText={'Appbar'} />
+        <Appbar />
       </header>
       <main className={style.dashboardContainer}>
-        <div className={style.box}>
-          <Dashboard />
-        </div>
+        <Dashboard />
       </main>
       <aside className={style.sidebarContainer}>
-        <LayoutPlaceholder placeholderText={'Sidebar'} />
+        <Sidebar />
       </aside>
       <footer className={style.footerContainer}>
-        <LayoutPlaceholder placeholderText={'Footer'} />
+        <Footer />
       </footer>
     </div>
   );
