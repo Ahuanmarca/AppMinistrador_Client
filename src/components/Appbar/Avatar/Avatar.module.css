@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatarContainer {
+  width: 43px; 
+  height: 43px;
+  border-radius: 50%; 
+  overflow: hidden;
+  background-image: url('../../../assets/fdata/lorena.jpg'); /* FDATA */
+  background-size: cover; 
+  background-position: center; 
+}

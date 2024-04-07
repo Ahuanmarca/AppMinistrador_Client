@@ -1,9 +1,13 @@
 // import * as React from 'react';
 import LayoutPlaceholder from "../Layout/LayoutPlaceholder";
+import Avatar from "./Avatar";
 
 function Appbar() {
   return (
-    <LayoutPlaceholder placeholderText={'Appbar'} />
+    <>
+    <Avatar></Avatar>
+    <LayoutPlaceholder placeholderText={'Appbar'}/>
+    </>
   );
 }
 
