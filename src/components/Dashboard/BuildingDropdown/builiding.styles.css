@@ -26,19 +26,6 @@ button {
   color: white;
   cursor: pointer;
 }
-/* .SelectItem:hover {
-  background-color: red;
-} */
-/* .SelectTrigger:focus {
-  box-shadow: 0 0 0 2px black;
-} */
-/* .SelectTrigger[data-placeholder] {
-} */
-
-/* .SelectIcon {
-  color: Var(--violet-11);
-} */
-
 
 .SelectContent {
   overflow: hidden;
