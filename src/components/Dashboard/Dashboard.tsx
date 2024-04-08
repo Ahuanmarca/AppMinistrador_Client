@@ -28,17 +28,17 @@ function Dashboard() {
                   <PanelGroup className={styles.PanelGroup} direction="horizontal">
                     <Panel className={styles.PanelRow}>
                       <div className={styles.Centered}>
-                        <PeopleCard placeholderText={"Total Inquilinos"} /> {/* // TODO: Total Inquilinos (Card) */}
+                        <PeopleCard placeholderText={"Total Inquilinos"} isPresident={false} /> {/* // TODO: Total Inquilinos (Card) */}
                       </div>
                     </Panel>
                     <Panel className={styles.PanelRow}>
                       <div className={styles.Centered}>
-                        <PeopleCard placeholderText={"Total Propietarios"} /> {/* // TODO: Total Propietarios (Card) */}
+                        <PeopleCard placeholderText={"Total Propietarios"} isPresident={false} /> {/* // TODO: Total Propietarios (Card) */}
                       </div>
                     </Panel>
                     <Panel className={styles.PanelRow}>
                       <div className={styles.Centered}>
-                        <PeopleCard placeholderText={"Presidente"} /> {/* // TODO: Presidente */}
+                        <PeopleCard placeholderText={"Presidente"} isPresident={true} /> {/* // TODO: Presidente */}
                       </div>
                     </Panel>
                   </PanelGroup>
