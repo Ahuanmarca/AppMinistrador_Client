@@ -1,16 +1,21 @@
 // import * as React from 'react';
 import styles from './Tab.module.css';
 
-function Tab({ icon: Icon, title = 'Title Placeholder', isActive = false, handleClick }) {
+function Tab({
+  icon: Icon,
+  title = 'Title Placeholder',
+  isActive = false,
+  handleClick,
+}) {
   const iconColor = isActive ? 'white' : '#044b59';
 
   const containerClass = isActive
     ? `${styles.container}`
-    : `${styles.container} ${styles.inactiveContainer}`
+    : `${styles.container} ${styles.inactiveContainer}`;
 
   const textClass = isActive
     ? `${styles.tabText}`
-    : `${styles.tabText} ${styles.inactiveTabText}`
+    : `${styles.tabText} ${styles.inactiveTabText}`;
 
   return (
     <div className={containerClass} onClick={handleClick}>
