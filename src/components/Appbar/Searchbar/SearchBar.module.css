@@ -1,0 +1,21 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start; 
+  align-items: center;
+  background-color: var(--searchbar-color);
+  color: var(--searchbar-placeholder-color);
+  width: 625px;
+  height: 48px;
+  border-radius: 20px;
+  padding: 15px;
+  }
+  
+
+.search {
+margin-left: 15px;
+  border: none;
+    outline: none;
+    background-color: transparent;
+}

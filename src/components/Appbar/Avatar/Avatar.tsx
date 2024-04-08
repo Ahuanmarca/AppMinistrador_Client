@@ -5,13 +5,15 @@ import fData from '../../../assets/fdata/lorena.jpg';
 
 function Avatar() {
   return (
-    <AvatarRadix.Root className={styles.AvatarRoot}>
-      <AvatarRadix.Image
-        className={styles.AvatarImage}
-        src={fData} /* FAKE DATA*/
-        alt="Lorena"
-      />
-    </AvatarRadix.Root>
+    <div className={styles.container}>
+      <AvatarRadix.Root className={styles.AvatarRoot}>
+        <AvatarRadix.Image
+          className={styles.AvatarImage}
+          src={fData} /* FAKE DATA*/
+          alt="Lorena"
+        />
+      </AvatarRadix.Root>
+    </div>
   );
 }
 

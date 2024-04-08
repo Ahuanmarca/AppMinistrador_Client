@@ -1,0 +1,25 @@
+.container {
+  height: 100%;
+  background-color: var(--appbar-color);
+  display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.searchBarWrapper {
+  width: 100%; 
+  max-width: 1307px;
+  margin: 0 auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 173px;
+  height: 100%;
+  display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
