@@ -1,0 +1,27 @@
+.container {
+  height: 100%;
+  /* padding:  */
+  background-color: var(--sidebar-color);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.tabGroupWrapper {
+  padding-inline-start: 18px;
+}
+
+.tabGroup {
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.bottomMenuWrapper {
+  padding-inline-start: 24px;
+  padding-block-end: 29px;
+
+  margin-top: auto;
+}
