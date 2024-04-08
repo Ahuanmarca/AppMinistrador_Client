@@ -1,0 +1,12 @@
+input[type="text"] {
+  border: none !important;
+  border-radius: 20px; /* Ajusta según sea necesario */
+}
+
+.search {
+  width: 625px;
+  height: 48px;
+  border-radius: 12px; /* Ajusta según sea necesario */
+  background-color: #E1E2E3;
+  color: #919293;
+}
