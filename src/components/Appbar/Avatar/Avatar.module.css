@@ -1,9 +1,8 @@
 
-@import '@radix-ui/colors/black-alpha.css';
-@import '@radix-ui/colors/violet.css';
-
 .container {
   height: 100%;
+  width: 100%;
+  max-width: 86px;
   display: flex;
   align-items: center;
   justify-content: center;
