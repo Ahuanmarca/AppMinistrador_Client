@@ -2,11 +2,13 @@
 // import DashboardPlaceholder from "../DashboardPlaceholder";
 import styles from "./PeopleCard.module.css";
 import AvatarCard from "./AvatarCard";
-import PhoneIcon from "./PhoneIcon";
+import PhoneIcon from "./icons/PhoneIcon";
+import ArrowIcon from "./icons/ArrowIcon";
+import GroupIcon from "./icons/GroupIcon";
 
 const building = {
   tenants: 140,
-  lanlords: 129,
+  text: "8,5% Último mes",
   president: {
     name: 'Oscar Peralta',
     phone: 665665665,
@@ -32,6 +34,19 @@ function PeopleCard({placeholderText, isPresident}) {
             <p className={styles.phone}>{building.president.phone}</p>
           </div>
         </div>}
+        {!isPresident &&
+          <div className={styles.peopleWrapper}>
+            <div className={styles.insideWrapper}>
+            <p className={styles.peopleNumber}>{building.tenants}</p>
+            <div className={styles.groupDiv}>
+              <GroupIcon></GroupIcon>
+            </div>
+            </div>
+            <div className={styles.numberWrapper}>
+              <ArrowIcon></ArrowIcon>
+              <p className={styles.peopleText}>{building.text}</p>
+            </div>
+          </div>}
     </div>
   );
 }

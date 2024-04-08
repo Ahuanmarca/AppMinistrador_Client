@@ -1,7 +1,4 @@
-/* * {
-  display: flex;
-  flex-direction: row;
-} */
+
 .container{
   width: 90%;
   height: 90%;
@@ -24,31 +21,86 @@
     font-weight: bold;
     font-size: 0.8rem;
   }
-  .presidentName {
-    color: var(--brand-color-main);
-    font-size: 1rem;
+
+  .peopleWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
-  .phoneWrapper{
+  .peopleNumber{
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .peopleText{
+    font-size: 0.9rem;
+    margin-left: 9px;
+  }
+
+  .numberWrapper{
     display: flex;
     flex-direction: row;
-    align-items: center;
-  }
-  .phone{
-    font-size: 0.7rem;
-    color: var(--grey);
-  }
-  .presidentWrapper{
-    display:flex;
-    flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 5px;
+    margin-right: 5px;
   }
-  .presidentContainer{
-    display:flex;
-    flex-direction: column;
+
+  .groupDiv {
     width: 100%;
     height: 100%;
+    max-width: 50px;
+    height: 50px;
+    background-color: #DDE3E8;
+    border-radius: 13px;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  .insideWrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items:center;
+    justify-content: space-between;
+  } 
+
+    /*isPresident*/
+    .presidentName {
+      color: var(--brand-color-main);
+      font-size: 1rem;
+    }
+    .presidentWrapper{
+      display:flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .presidentContainer{
+      display:flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .phoneWrapper{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .phone{
+      font-size: 0.7rem;
+      color: var(--grey);
+    }
