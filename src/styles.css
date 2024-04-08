@@ -21,6 +21,7 @@
   --color-panel-background-alternate: #202124;
 
   --background-color: rgb(43, 43, 43);
+  --grey: rgb(98, 98, 98);
 }
 
 input {
