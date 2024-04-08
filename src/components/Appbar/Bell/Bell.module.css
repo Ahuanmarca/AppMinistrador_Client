@@ -16,6 +16,8 @@ input {
 }
 .notifications {
   margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .PopoverContent {
   border-radius: 4px;

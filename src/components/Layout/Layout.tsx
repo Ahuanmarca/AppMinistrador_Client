@@ -12,6 +12,7 @@ import ContabilidadPage from '../../pages/ContabilidadPage';
 import MensajesPage from '../../pages/MensajesPage';
 import ConfiguracionPage from '../../pages/ConfiguracionPage';
 import AyudaPage from '../../pages/AyudaPage';
+import PerfilPage from '../../pages/PerfilPage';
 
 function Layout() {
   return (
@@ -28,6 +29,7 @@ function Layout() {
           <Route path="/mensajes"       element={<MensajesPage />} />
           <Route path="/configuracion"  element={<ConfiguracionPage />} />
           <Route path="/ayuda"          element={<AyudaPage />} />
+          <Route path="/perfil"          element={<PerfilPage />} />
         </Routes>
       </main>
       <aside className={style.sidebarContainer}>
