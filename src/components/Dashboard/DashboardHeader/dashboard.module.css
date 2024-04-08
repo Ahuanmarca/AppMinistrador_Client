@@ -1,0 +1,38 @@
+h1 {
+  font-family: var(--font-Roboto);
+}
+.title{
+color:var(--black);
+font-family: var(--font-Roboto);
+font-size: 28px;}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wrapperTitle{
+  width: 100%;
+  height: 100%;
+  max-width:256px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.wrapperDropdown{
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
