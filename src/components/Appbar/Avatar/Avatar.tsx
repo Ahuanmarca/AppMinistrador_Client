@@ -1,7 +1,9 @@
 // import * as React from 'react';
 import * as AvatarRadix from '@radix-ui/react-avatar';
 import styles from './Avatar.module.css';
-import fData from '../../../assets/fdata/lorena.jpg';
+
+
+const imageURL = 'https://images.pexels.com/photos/11531404/pexels-photo-11531404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
 function Avatar() {
   return (
@@ -9,7 +11,7 @@ function Avatar() {
       <AvatarRadix.Root className={styles.AvatarRoot}>
         <AvatarRadix.Image
           className={styles.AvatarImage}
-          src={fData} /* FAKE DATA*/
+          src={imageURL}
           alt="Lorena"
         />
       </AvatarRadix.Root>
