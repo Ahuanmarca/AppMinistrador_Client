@@ -1,5 +1,5 @@
 // import * as React from 'react';
-import SearchBar from "./SearchBar";
+import SearchBar from "./Searchbar";
 import Avatar from "./Avatar";
 import Bell from "./Bell";
 import styles from "./Appbar.module.css";
