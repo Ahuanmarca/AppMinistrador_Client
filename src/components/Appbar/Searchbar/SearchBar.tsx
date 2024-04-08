@@ -1,12 +1,12 @@
 // import * as React from 'react';
-import GlassIcon from "./magnifyingGlassIcon";
+import GlassIcon from './MagnifyingGlassIconV2';
 import styles from './SearchBar.module.css';
 
 function SearchBar() {
   return (
     <div className={styles.container}>
         <div className={styles.icon}>
-          <GlassIcon></GlassIcon>
+          <GlassIcon />
         </div>
       <input
         className={styles.search}
