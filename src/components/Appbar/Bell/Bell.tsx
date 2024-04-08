@@ -15,7 +15,7 @@ function PopoverDemo(){
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Content className={styles.PopoverContent} sideOffset={1}>
-          <div style={{ display: 'flex', flexDirection: 'column', }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div className={styles.notifications}>
               <p className={styles.text}>No hay nuevas notificaciones 📣</p>
             </div>
