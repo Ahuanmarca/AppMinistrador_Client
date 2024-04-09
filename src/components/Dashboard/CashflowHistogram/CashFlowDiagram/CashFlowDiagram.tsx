@@ -26,7 +26,7 @@ function CashFlowDiagram() {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" vertical={false} strokeWidth={0.5} />
-      <XAxis dataKey="name" tick={{ fill: '#BCBCBC', fontSize: 12  }}  />
+      <XAxis dataKey="name" tick={{ fill: '#BCBCBC', fontSize: 12  }} tickLine={false} axisLine={{ stroke: 'transparent' }}/>
       <YAxis axisLine={false} tick={{ fill: '#BCBCBC', fontSize: 12 }} tickLine={false} domain={['dataMin', 'dataMax']}/>
       <Tooltip content={CustomTooltipCashFlow} /> 
       <Legend  payload={[
