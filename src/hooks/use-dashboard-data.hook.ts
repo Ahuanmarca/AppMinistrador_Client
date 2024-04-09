@@ -1,6 +1,8 @@
 import useSWR, { mutate } from 'swr';
 import { format } from 'date-fns';
 
+const BASE_URL = 'https://appministrador-server-tob7.onrender.com';
+
 // Building Id (hardcoded for now) // TODO: Implement non hardcoded value
 const BUILDING_ID = '1';
 
@@ -10,21 +12,34 @@ const ACCOUNT_ID = '1';
 // Create default date range for cashflow histogram
 // -> The last 12 months, up to the current day of the present month
 const cashDate = new Date();
-const end = format(cashDate, 'yyyy-MM-dd');
+const END = format(cashDate, 'yyyy-MM-dd');
 cashDate.setDate(1);
 cashDate.setMonth(cashDate.getMonth() - 11);
-const start = format(cashDate, 'yyyy-MM-dd');
+const START = format(cashDate, 'yyyy-MM-dd');
 
 // Create date for couning previous month neighbours
 const neighboursDate = new Date();
 neighboursDate.setMonth(neighboursDate.getMonth() - 1);
-const dateItem = format(neighboursDate, 'yyyy-MM-dd');
+const DATE_ITEM = format(neighboursDate, 'yyyy-MM-dd');
 
-// Endpoint build
-const BASE_URL = 'https://appministrador-server-tob7.onrender.com';
-const params = `/dashboard/building/${BUILDING_ID}/bankAccount/${ACCOUNT_ID}/`
-const queryParams = `?start=${start}&end=${end}&dates=${dateItem}`
+// Helper function to build endpoint
+function buildEndpoint(baseUrl, buildingId, accountId, start, end, dateItem) {
+  const params = `/dashboard/building/${buildingId}/bankAccount/${accountId}/`;
+  const queryParams = `?start=${start}&end=${end}&dates=${dateItem}`;
+  return baseUrl + params + queryParams;
+}
 
+// Default URL to be returned when component is first mounted
+const DEFAULT_REQUEST = buildEndpoint(
+  BASE_URL,
+  BUILDING_ID,
+  ACCOUNT_ID,
+  START,
+  END,
+  DATE_ITEM
+);
+
+// Fetcher function for swr
 async function fetcher(endpoint) {
   const response = await fetch(endpoint);
   const json = await response.json();
@@ -33,15 +48,27 @@ async function fetcher(endpoint) {
 }
 
 function useDashboardData() {
-  function handleChangeRequest(newRequest) {
-    mutate(BASE_URL + newRequest);
+  
+  function updateDashboardData({
+    buildingId = BUILDING_ID,
+    accountId = ACCOUNT_ID,
+    start = START,
+    end = END,
+    dateItem = DATE_ITEM,
+  }): void {
+    const updatedRequest = buildEndpoint(
+      BASE_URL,
+      buildingId,
+      accountId,
+      start,
+      end,
+      dateItem
+    );
+    mutate(updatedRequest);
   }
 
-  const { data, error, isLoading } = useSWR(
-    BASE_URL + params + queryParams,
-    fetcher
-  );
-  return { data, error, isLoading, handleChangeRequest };
+  const { data, error, isLoading } = useSWR(DEFAULT_REQUEST, fetcher);
+  return { data, error, isLoading, updateDashboardData };
 }
 
 export default useDashboardData;
