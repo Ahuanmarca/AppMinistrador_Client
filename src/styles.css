@@ -12,6 +12,10 @@
     --appbar-color: #f2f3f2; 
     --searchbar-color: #e2e3e2;
     --searchbar-placeholder-color: #929292;
+    /*Custom Charts*/
+    --tooltip-color: rgba(249, 249, 249, 0.8) ; 
+    --cashflow-expenses: #577B91;
+    --cashflow-income: rgba(88, 124, 146, 0.4);
 
   /* from react-resizable-panels library */
   --color-resize-bar-drag: #39414d;
