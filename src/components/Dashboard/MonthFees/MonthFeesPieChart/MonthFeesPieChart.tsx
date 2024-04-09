@@ -107,7 +107,7 @@ function MonthFeesPieChart() {
         startAngle={90}
         endAngle={450}
       >
-        {data.map((entry, index) => (
+        {data.map((_entry, index) => (
           <Cell
           key={`cell-${index}`}
           fill={COLORS[index]}
