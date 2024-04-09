@@ -1,11 +1,14 @@
 import { BrowserRouter } from 'react-router-dom';
+import { DashboardProvider } from '../../contexts/DashboardContext';
 
 import Layout from '../Layout';
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout />
+      <DashboardProvider>
+        <Layout />
+      </DashboardProvider>
     </BrowserRouter>
   );
 }

@@ -1,6 +1,7 @@
-// import * as React from 'react';
+import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import style from './Layout.module.css';
+import { DashboardContext } from '../../contexts/DashboardContext';
 
 import Dashboard from '../Dashboard';
 import Appbar from '../Appbar';
@@ -15,6 +16,10 @@ import AyudaPage from '../../pages/AyudaPage';
 import PerfilPage from '../../pages/PerfilPage';
 
 function Layout() {
+  // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
+  const { data, error, isLoading } = React.useContext(DashboardContext);
+  console.debug({ context: { data, error, isLoading } });
+
   return (
     <div className={style.layoutContainer}>
       <header className={style.headerContainer}>
