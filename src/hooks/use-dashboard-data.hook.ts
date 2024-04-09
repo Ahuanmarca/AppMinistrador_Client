@@ -1,7 +1,29 @@
-import useSWR from 'swr';
+import useSWR, { mutate } from 'swr';
+import { format } from 'date-fns';
 
-const BASE_URL = 'https://appministrador-server-tob7.onrender.com'
-const EXAMPLE_REQUEST = '/dashboard/building/1/bankAccount/1?start=2023-01-01&end=2023-12-31&dates=2024-02-29&dates=2024-03-31'
+// Building Id (hardcoded for now) // TODO: Implement non hardcoded value
+const BUILDING_ID = '1';
+
+// Bank Account Id // TODO: Implement non hardcoded value
+const ACCOUNT_ID = '1';
+
+// Create default date range for cashflow histogram
+// -> The last 12 months, up to the current day of the present month
+const cashDate = new Date();
+const end = format(cashDate, 'yyyy-MM-dd');
+cashDate.setDate(1);
+cashDate.setMonth(cashDate.getMonth() - 11);
+const start = format(cashDate, 'yyyy-MM-dd');
+
+// Create date for couning previous month neighbours
+const neighboursDate = new Date();
+neighboursDate.setMonth(neighboursDate.getMonth() - 1);
+const dateItem = format(neighboursDate, 'yyyy-MM-dd');
+
+// Endpoint build
+const BASE_URL = 'https://appministrador-server-tob7.onrender.com';
+const params = `/dashboard/building/${BUILDING_ID}/bankAccount/${ACCOUNT_ID}/`
+const queryParams = `?start=${start}&end=${end}&dates=${dateItem}`
 
 async function fetcher(endpoint) {
   const response = await fetch(endpoint);
@@ -11,8 +33,15 @@ async function fetcher(endpoint) {
 }
 
 function useDashboardData() {
-  const { data, error, isLoading } = useSWR(BASE_URL + EXAMPLE_REQUEST, fetcher);
-  return { data, error, isLoading };
+  function handleChangeRequest(newRequest) {
+    mutate(BASE_URL + newRequest);
+  }
+
+  const { data, error, isLoading } = useSWR(
+    BASE_URL + params + queryParams,
+    fetcher
+  );
+  return { data, error, isLoading, handleChangeRequest };
 }
 
 export default useDashboardData;
