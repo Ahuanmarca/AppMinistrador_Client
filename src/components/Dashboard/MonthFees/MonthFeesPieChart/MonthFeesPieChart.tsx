@@ -1,12 +1,12 @@
-import "./MonthFeesPieChart.module.css";
 import { useCallback, useState } from "react";
-import { PieChart, Pie, Sector } from "recharts";
+import { Cell, PieChart, Pie, Sector } from "recharts";
+import styles from './MonthFeesPieChart.module.css'
 
 const data = [
-  { name: "Gastos", value: 2123.28 },
-  { name: "Pagado", value: 200 }
+  { name: "Pagado", value: 270.30 },
+  { name: "Gastos", value: 923.28 }
 ];
-
+const COLORS = ['var(--brand-color-main)', '#743043']
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -33,8 +33,8 @@ const renderActiveShape = (props) => {
   const textAnchor = cos >= 0 ? "start" : "end";
 
   return (
-    <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+    <g className={styles.chart}>
+      <text style={{fontSize:'15px', fontWeight:'bold'}} x={cx} y={cy} dy={8} textAnchor="middle" fill={fill} >
         {payload.name}
       </text>
       <Sector
@@ -66,7 +66,7 @@ const renderActiveShape = (props) => {
         y={ey}
         textAnchor={textAnchor}
         fill="#333"
-      >{`PV ${value}`}</text>
+      ><tspan style={{ fontWeight: 'bold', fontSize: '19px', fill: 'var(--cashflow-expenses)' }}>€</tspan> {`${value}`}</text>
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}
@@ -74,7 +74,7 @@ const renderActiveShape = (props) => {
         textAnchor={textAnchor}
         fill="#999"
       >
-        {`(Rate ${(percent * 100).toFixed(2)}%)`}
+        {`(${(percent * 100).toFixed(0)}%)`}
       </text>
     </g>
   );
@@ -90,22 +90,35 @@ function MonthFeesPieChart() {
   );
 
   return (
-    <PieChart width={400} height={400}>
-      <Pie
+    <div className={styles.containerDiv}>
+      <div className={styles.pieChartContainer}>
+    <PieChart className={styles.container} width={500} height={300}>
+      <Pie className={styles.pie}
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
         data={data}
-        cx={200}
-        cy={200}
-        innerRadius={60}
-        outerRadius={80}
-        fill="#8884d8"
+        cx={250}
+        cy={150}
+        innerRadius={40}
+        outerRadius={60}
+        fill="var(--brand-color-main)"
         dataKey="value"
         onMouseEnter={onPieEnter}
-      />
+        startAngle={90}
+        endAngle={450}
+      >
+        {data.map((entry, index) => (
+          <Cell
+          key={`cell-${index}`}
+          fill={COLORS[index]}
+          className={index === 1 ? styles.widerSegment : undefined}
+          />
+        ))}
+      </Pie>
     </PieChart>
+    </div>
+    </div>
   );
 }
 
-
-export default MonthFeesPieChart
+export default MonthFeesPieChart;
