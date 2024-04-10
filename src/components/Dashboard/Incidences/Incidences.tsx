@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { DashboardContext } from '../../../contexts/DashboardContext';
-// import { useReactTable } from '@tanstack/react-table';
 
 import styles from './Incidences.module.css';
 import IncidencesTable from './IncidencesTable';
