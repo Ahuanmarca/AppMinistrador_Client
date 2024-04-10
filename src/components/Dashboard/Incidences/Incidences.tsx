@@ -1,9 +1,13 @@
 // import * as React from 'react';
-import DashboardPlaceholder from "../DashboardPlaceholder";
+import styles from './Incidences.module.css';
 
 function Incidences() {
   return (
-    <DashboardPlaceholder placeholderText={"Incidencias"} />
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <p>Incidences</p>
+      </div>
+    </div>
   );
 }
 
