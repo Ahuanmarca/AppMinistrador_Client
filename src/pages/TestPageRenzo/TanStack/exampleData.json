@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Humedad en la escalera",
+    "description": "Humedad en la escalera, planta baja y 1era planta. Manchas en la pared y pintura descascarada. Mal olor.",
+    "image_url": "https://humedadcontrolada.com/wp-content/uploads/2017/07/Capilaridad-11.jpg",
+    "user_dni": "55921386C",
+    "building_id": 1,
+    "provider_id": 1,
+    "date": "2024-02-02T00:00:00.000Z",
+    "time": "1970-01-01T18:00:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 2,
+    "title": "Barandilla astillada",
+    "description": "Barandilla por lijar y barnizar en zona común del hall principal.",
+    "image_url": "https://thumbs.dreamstime.com/z/vieja-entrada-lamentable-sucia-con-las-escaleras-96600704.jpg?ct=jpeg",
+    "user_dni": "51802544N",
+    "building_id": 1,
+    "provider_id": 2,
+    "date": "2024-02-10T00:00:00.000Z",
+    "time": "1970-01-01T11:00:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 3,
+    "title": "Suelo agrietado",
+    "description": "Suelo con baldosines para cambiar por estar quebrados en el segundo piso",
+    "image_url": "https://media.istockphoto.com/id/1198105278/es/foto/pasillo-con-pared-blanca-sucia-y-baldosas-de-suelo-hexagonal-roto.jpg?s=2048x2048&w=is&k=20&c=c3hiK-64TeRLYUYrT-TX3xei6xdK2IYnsD-1vdFQJNw=",
+    "user_dni": "02296421D",
+    "building_id": 1,
+    "provider_id": 3,
+    "date": "2024-02-15T00:00:00.000Z",
+    "time": "1970-01-01T19:00:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 4,
+    "title": "Fugas de agua",
+    "description": "Tuberías rotas o con fugas que pueden provocar daños en la propiedad y desperdicio de agua en el primer piso.",
+    "image_url": "https://supervecina.com/wp-content/uploads/2023/06/Tuberias.webp",
+    "user_dni": "93037013N",
+    "building_id": 1,
+    "provider_id": 4,
+    "date": "2024-02-19T00:00:00.000Z",
+    "time": "1970-01-01T16:35:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 5,
+    "title": "Averías eléctricas",
+    "description": "Bombillas que no funcionan en el pasillo del descansillo del piso 2",
+    "image_url": "https://static.simonelectric.com/sites/default/files/inline-images/como-iluminar-un-pasillo-con-leds-interiores.jpg",
+    "user_dni": "04265798B",
+    "building_id": 1,
+    "provider_id": 5,
+    "date": "2024-02-20T00:00:00.000Z",
+    "time": "1970-01-01T18:00:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 6,
+    "title": "Ruidos molestos",
+    "description": "Quejas de arrendatarios sobre ruidos excesivos o molestos provenientes de otros residentes de la tercera planta",
+    "image_url": null,
+    "user_dni": "14482182W",
+    "building_id": 1,
+    "provider_id": 6,
+    "date": "2024-02-25T00:00:00.000Z",
+    "time": "1970-01-01T09:45:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 7,
+    "title": "Problemas de basura y reciclaje",
+    "description": "Acumulación de basura y contenedores desbordados a la entrada de la finca",
+    "image_url": "https://estaticos-cdn.prensaiberica.es/clip/43adbf92-5531-4717-aca3-7ffe79c3d118_16-9-discover-aspect-ratio_default_1193133.jpg",
+    "user_dni": "76641167S",
+    "building_id": 1,
+    "provider_id": 7,
+    "date": "2024-02-28T00:00:00.000Z",
+    "time": "1970-01-01T18:00:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 8,
+    "title": "Plagas y control de plagas",
+    "description": "Presencia de insectos, concretamente cucarachas, en la planta baja y el primer piso.",
+    "image_url": "https://eleconomico.es/media/k2/items/cache/e856b833cde910b2828b785768587319_XL.jpg?t=20190614_170948",
+    "user_dni": "01436730N",
+    "building_id": 1,
+    "provider_id": 8,
+    "date": "2024-03-02T00:00:00.000Z",
+    "time": "1970-01-01T12:20:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 9,
+    "title": "Falta de limpieza",
+    "description": "La zona común de la entrada de la finca está muy sucia.",
+    "image_url": "https://suelodebarro.es/galerias/fotos/problemas/268.jpg",
+    "user_dni": "92074524G",
+    "building_id": 1,
+    "provider_id": 9,
+    "date": "2024-03-03T00:00:00.000Z",
+    "time": "1970-01-01T11:00:00.000Z",
+    "status": "activo"
+  },
+  {
+    "id": 10,
+    "title": "Ascensor con mal funcionamiento",
+    "description": "La puerta del ascensor se queda abierta si no la cierras manualmente",
+    "image_url": "https://www.rescateascensores.es/Imagenes/Imagen7.jpg",
+    "user_dni": "12385025T",
+    "building_id": 1,
+    "provider_id": 10,
+    "date": "2024-03-10T00:00:00.000Z",
+    "time": "1970-01-01T13:00:00.000Z",
+    "status": "activo"
+  }
+]

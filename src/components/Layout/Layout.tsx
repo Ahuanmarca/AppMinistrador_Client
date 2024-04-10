@@ -14,6 +14,7 @@ import MensajesPage from '../../pages/MensajesPage';
 import ConfiguracionPage from '../../pages/ConfiguracionPage';
 import AyudaPage from '../../pages/AyudaPage';
 import PerfilPage from '../../pages/PerfilPage';
+import TestPageRenzo from '../../pages/TestPageRenzo';
 
 function Layout() {
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
@@ -34,7 +35,8 @@ function Layout() {
           <Route path="/mensajes"       element={<MensajesPage />} />
           <Route path="/configuracion"  element={<ConfiguracionPage />} />
           <Route path="/ayuda"          element={<AyudaPage />} />
-          <Route path="/perfil"          element={<PerfilPage />} />
+          <Route path="/perfil"         element={<PerfilPage />} />
+          <Route path="/renzo"          element={<TestPageRenzo />} />
         </Routes>
       </main>
       <aside className={style.sidebarContainer}>
