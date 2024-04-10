@@ -16,7 +16,7 @@ function Dashboard() {
         <Panel defaultSize={12}>
           <DashboardHeader />
         </Panel>
-
+        <ResizeHandle />
         <Panel defaultSize={88}>
           <PanelGroup direction="horizontal">
             <Panel defaultSize={63} minSize={50}>
@@ -29,12 +29,14 @@ function Dashboard() {
                         isPresident={false}
                       />
                     </Panel>
+                    <ResizeHandle />
                     <Panel>
                       <PeopleCard
                         placeholderText={'Total Propietarios'}
                         isPresident={false}
                       />
                     </Panel>
+                    <ResizeHandle />
                     <Panel>
                       <PeopleCard
                         placeholderText={'Presidente'}
@@ -43,9 +45,11 @@ function Dashboard() {
                     </Panel>
                   </PanelGroup>
                 </Panel>
+                <ResizeHandle />
                 <Panel defaultSize={37}>
                   <CashflowHistogram />
                 </Panel>
+                <ResizeHandle />
                 <Panel>
                   {/* INCIDENCIAS TABLE */}
                   <Incidences />
@@ -58,6 +62,7 @@ function Dashboard() {
                 <Panel defaultSize={40}>
                   <MonthFees />
                 </Panel>
+                <ResizeHandle />
                 <Panel defaultSize={60}>
                   <Providers /> {/* // TODO: Proveedores */}
                 </Panel>
