@@ -1,0 +1,26 @@
+.container {
+  height: 50px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--brand-color-main);
+  color: var(--white);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.inactiveContainer {
+  background-color: var(--sidebar-color);
+}
+
+.tabText {
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.inactiveTabText {
+  color: var(--brand-color-main);
+}

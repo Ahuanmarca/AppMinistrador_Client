@@ -1,7 +1,16 @@
-import Layout from "../Layout";
+import { BrowserRouter } from 'react-router-dom';
+import { DashboardProvider } from '../../contexts/DashboardContext';
+
+import Layout from '../Layout';
 
 function App() {
-  return <Layout />;
+  return (
+    <BrowserRouter>
+      <DashboardProvider>
+        <Layout />
+      </DashboardProvider>
+    </BrowserRouter>
+  );
 }
 
 export default App;
