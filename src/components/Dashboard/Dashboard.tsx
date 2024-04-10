@@ -1,6 +1,6 @@
 import { PanelGroup, Panel } from 'react-resizable-panels';
 import ResizeHandle from './ResizeHandle';
-import styles from './shared.module.css';
+import styles from './Dashboard.module.css';
 
 import DashboardHeader from './DashboardHeader';
 import CashflowHistogram from './CashflowHistogram';
@@ -12,70 +12,60 @@ import Providers from './Providers';
 function Dashboard() {
   return (
     <div className={styles.PanelGroupWrapper}>
-      <PanelGroup className={styles.PanelGroup} direction="vertical">
-
-        <Panel className={styles.PanelRow} defaultSize={12}>
-          <div className={styles.Centered}>
-            <DashboardHeader /> {/* // TODO: Dashboard Title & Building Dropdown Menu */}
-          </div>
+      <PanelGroup direction="vertical">
+        <Panel defaultSize={12}>
+          <DashboardHeader />
         </Panel>
 
-        <Panel className={styles.PanelRow} defaultSize={88}>
-          <PanelGroup className={styles.PanelGroup} direction="horizontal">
-            <Panel className={styles.PanelRow} defaultSize={63} minSize={50}>
-              <PanelGroup className={styles.PanelGroup} direction="vertical">
-                <Panel className={styles.PanelRow} defaultSize={20}>
-                  <PanelGroup className={styles.PanelGroup} direction="horizontal">
-                    <Panel className={styles.PanelRow}>
-                      <div className={styles.Centered}>
-                        <PeopleCard placeholderText={"Total Inquilinos"} isPresident={false} /> {/* // TODO: Total Inquilinos (Card) */}
-                      </div>
+        <Panel defaultSize={88}>
+          <PanelGroup direction="horizontal">
+            <Panel defaultSize={63} minSize={50}>
+              <PanelGroup direction="vertical">
+                <Panel defaultSize={20}>
+                  <PanelGroup direction="horizontal">
+                    <Panel>
+                      <PeopleCard
+                        placeholderText={'Total Inquilinos'}
+                        isPresident={false}
+                      />
                     </Panel>
-                    <Panel className={styles.PanelRow}>
-                      <div className={styles.Centered}>
-                        <PeopleCard placeholderText={"Total Propietarios"} isPresident={false} /> {/* // TODO: Total Propietarios (Card) */}
-                      </div>
+                    <Panel>
+                      <PeopleCard
+                        placeholderText={'Total Propietarios'}
+                        isPresident={false}
+                      />
                     </Panel>
-                    <Panel className={styles.PanelRow}>
-                      <div className={styles.Centered}>
-                        <PeopleCard placeholderText={"Presidente"} isPresident={true} /> {/* // TODO: Presidente */}
-                      </div>
+                    <Panel>
+                      <PeopleCard
+                        placeholderText={'Presidente'}
+                        isPresident={true}
+                      />
                     </Panel>
                   </PanelGroup>
                 </Panel>
-                <Panel className={styles.PanelRow} defaultSize={37}>
-                  <div className={styles.Centered}>
-                    <CashflowHistogram /> {/* // TODO: Ingresos vs. gastos */}
-                  </div>
+                <Panel defaultSize={37}>
+                  <CashflowHistogram />
                 </Panel>
-                <Panel className={styles.PanelRow}>
+                <Panel>
                   {/* INCIDENCIAS TABLE */}
-                  <div className={styles.Centered}>
-                    <Incidences /> {/* // TODO: Incidencias */}
-                  </div>
+                  <Incidences />
                 </Panel>
-              </PanelGroup> 
+              </PanelGroup>
             </Panel>
-            <ResizeHandle className={styles.ResizeHandle} />
-            <Panel className={styles.PanelRow} defaultSize={37} minSize={20}>
-              <PanelGroup className={styles.PanelGroup} direction="vertical">
-                <Panel className={styles.PanelRow} defaultSize={40}>
-                  <div className={styles.Centered}>
-                    <MonthFees /> {/* // TODO: Cuotas del mes */}
-                  </div>
+            <ResizeHandle />
+            <Panel defaultSize={37} minSize={20}>
+              <PanelGroup direction="vertical">
+                <Panel defaultSize={40}>
+                  <MonthFees />
                 </Panel>
-                <Panel className={styles.PanelRow} defaultSize={60}>
-                  <div className={styles.Centered}>
-                    <Providers /> {/* // TODO: Proveedores */}
-                  </div>
+                <Panel defaultSize={60}>
+                  <Providers /> {/* // TODO: Proveedores */}
                 </Panel>
               </PanelGroup>
             </Panel>
           </PanelGroup>
         </Panel>
       </PanelGroup>
-
-
     </div>
   );
 }

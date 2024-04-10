@@ -26,6 +26,22 @@
 
   --background-color: rgb(43, 43, 43);
   --grey: rgb(98, 98, 98);
+
+  /* Colors by name, copied from "Tokens/Color" page 
+    on ""Grupo 3 - Desafío Tripulaciones" Figma file */
+  --color-principal:              #ab172f;
+  --color-primario:               #024b59;
+  --color-secundario-amarillo:    #ffcc4d;
+  --color-secundario-verde:       #1abc7b;
+  --color-neutro-blanco:          #fff;
+  --color-neutro-pantalla:        #fefefe;
+  --color-neutro-detalles:        #f0f0f0;
+  --color-neutro-medio:           #cac9c9;
+  --color-neutro:                 #7f7f7f;
+  --color-negro-casi:             #4e4e4e;
+
+  /* Colors copied directly from "VERSION FINAL APP" file */
+  --color-dashboard-panel-border: #eceef6; /* Copied from the border of a dashboard section */
 }
 
 input {
