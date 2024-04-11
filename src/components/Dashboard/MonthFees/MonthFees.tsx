@@ -2,6 +2,7 @@ import * as React from 'react';
 // import DashboardPlaceholder from "../DashboardPlaceholder";
 import MonthFeesPieChart from "./MonthFeesPieChart";
 import styles from './MonthFees.module.css'
+import {Circles} from 'react-loader-spinner'
 import { DashboardContext } from "../../../contexts/DashboardContext";
 function MonthFees() {
 
@@ -9,7 +10,17 @@ function MonthFees() {
   const { data, error, isLoading } = React.useContext(DashboardContext);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    // return <div className={styles.loading}><Circles color='var(--brand-color-main)'></Circles></div>
+    return <div className={styles.container}>
+              <div className={styles.titleWrapper}>
+                <h1 className={styles.title}>Cuotas del mes</h1>
+                <h1 className={styles.expenses}>Total: €</h1>
+              </div>
+              <div className={styles.loadingMore}>
+                  <Circles color='var(--brand-color-main)' height={250} width={100}></Circles>
+                </div>
+            </div>
+
   }
 
   if (error) {
