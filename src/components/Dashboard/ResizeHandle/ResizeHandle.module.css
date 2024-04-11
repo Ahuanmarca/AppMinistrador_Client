@@ -5,6 +5,7 @@
   align-items: stretch;
   outline: none;
   transition: background-color 0.2s linear;
+  background-color: blueviolet;
 }
 .ResizeHandle[data-resize-handle-active="keyboard"],
 .ResizeHandle[data-resize-handle-active="pointer"] {

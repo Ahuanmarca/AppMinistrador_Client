@@ -22,7 +22,7 @@ function Dashboard() {
             <Panel defaultSize={63} minSize={50}>
               <PanelGroup direction="vertical">
                 <Panel defaultSize={20}>
-                  <PanelGroup direction="horizontal" className={styles.cardWrapper}>
+                  <PanelGroup direction="horizontal">
                     <Panel>
                       <PeopleCard
                         placeholderText={'Total Inquilinos'}

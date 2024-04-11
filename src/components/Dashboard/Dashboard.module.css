@@ -4,8 +4,5 @@
   border: 2px solid hotpink; /* DEBUG CSS */
 }
 
-.cardWrapper{
-  display: flex;
-  justify-content: space-between;
-  margin-right: -5px;
-}
+/* .CardsWrapper{ */
+  /* background-color: red; */
