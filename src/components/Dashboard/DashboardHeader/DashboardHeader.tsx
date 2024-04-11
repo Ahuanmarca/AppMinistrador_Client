@@ -1,6 +1,6 @@
 // import * as React from 'react';
 // import DashboardPlaceholder from "../DashboardPlaceholder";
-import styles from "./dashboard.module.css";
+import styles from "./DashboardHeader.module.css";
 import BuildingDropdown from "..//BuildingDropdown/BuildingDropdown.jsx";
 
 function DashboardHeader() {
