@@ -1,12 +1,12 @@
 
 .container{
+  border:  2px dotted blue ;
   width: 90%;
-  height: 90%;
-  max-width: 260px;
+  height: 100%;
   max-height: 152px;
   border-radius: 10px;
   background-color: darkgray;
-  margin:20px;
+  /* margin:20px; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
