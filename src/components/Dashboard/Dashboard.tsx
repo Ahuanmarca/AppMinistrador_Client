@@ -36,7 +36,7 @@ function Dashboard() {
                         isPresident={false}
                       />
                     </Panel>
-                    {/* <ResizeHandle /> */}
+                    <ResizeHandle />
                     <Panel>
                       <PeopleCard
                         placeholderText={'Presidente'}
@@ -58,8 +58,8 @@ function Dashboard() {
             </Panel>
             <ResizeHandle />
             <Panel defaultSize={37} minSize={20}>
-              <PanelGroup direction="vertical">
-                <Panel defaultSize={40}>
+              <PanelGroup direction="vertical" className={styles.MonthFees}>
+                <Panel defaultSize={40} >
                   <MonthFees />
                 </Panel>
                 <ResizeHandle />
