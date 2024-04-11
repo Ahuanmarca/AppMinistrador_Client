@@ -15,6 +15,12 @@ import ConfiguracionPage from '../../pages/ConfiguracionPage';
 import AyudaPage from '../../pages/AyudaPage';
 import PerfilPage from '../../pages/PerfilPage';
 
+// Test pages / components
+import Basic from '../../pages/TestPageRenzo/TanStack/Basic';
+import ColumnGroups from '../../pages/TestPageRenzo/TanStack/ColumnGroups';
+import ColumnOrdering from '../../pages/TestPageRenzo/TanStack/ColumnOrdering';
+import Sorting from '../../pages/TestPageRenzo/TanStack/Sorting';
+
 function Layout() {
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
   const { data, error, isLoading } = React.useContext(DashboardContext);
@@ -34,7 +40,13 @@ function Layout() {
           <Route path="/mensajes"       element={<MensajesPage />} />
           <Route path="/configuracion"  element={<ConfiguracionPage />} />
           <Route path="/ayuda"          element={<AyudaPage />} />
-          <Route path="/perfil"          element={<PerfilPage />} />
+          <Route path="/perfil"         element={<PerfilPage />} />
+          <Route path="/renzo">
+            <Route path="/renzo/basic" element={<Basic />} />
+            <Route path="/renzo/column-groups" element={<ColumnGroups />} />
+            <Route path="/renzo/column-ordering" element={<ColumnOrdering />} />
+            <Route path="/renzo/sorting" element={<Sorting />} />
+          </Route>
         </Routes>
       </main>
       <aside className={style.sidebarContainer}>
