@@ -21,11 +21,14 @@ function MonthFees() {
     { name: 'Gastos', value: Number(data.currentMonthFees.fees)}
   ]
 
+  const totalExpenses = chartData[0].value + chartData[1].value
+
   return (
     // <DashboardPlaceholder placeholderText={"Cuotas del mes"} />
     <div className={styles.container}>
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>Cuotas del mes</h1>
+        <h1 className={styles.expenses}>Total: {totalExpenses}€</h1>
       </div>
       <MonthFeesPieChart data={chartData}></MonthFeesPieChart>
     </div>

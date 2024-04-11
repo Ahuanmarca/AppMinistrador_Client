@@ -17,14 +17,13 @@ function MonthFeesPieChart({data}) {
   );
   return (
     <div className={styles.containerDiv}>
-      <div className={styles.pieChartContainer}>
-    <PieChart className={styles.container} width={500} height={300}>
+      <PieChart className={styles.container} width={500} height={300}>
       <Pie className={styles.pie}
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
         data={data}
         cx={250}
-        cy={150}
+        cy={120}
         innerRadius={40}
         outerRadius={60}
         fill="var(--brand-color-main)"
@@ -42,7 +41,6 @@ function MonthFeesPieChart({data}) {
         ))}
       </Pie>
     </PieChart>
-    </div>
     </div>
   );
 }
