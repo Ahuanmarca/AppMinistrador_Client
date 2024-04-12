@@ -8,7 +8,7 @@ import {
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
-import { Incidence } from '../../../../types/Incidence';
+import { Incidence } from '../../../../../types/Incidence';
 // import * as ScrollArea from '@radix-ui/react-scroll-area';
 import styles from './IncidencesTable.module.css';
 
