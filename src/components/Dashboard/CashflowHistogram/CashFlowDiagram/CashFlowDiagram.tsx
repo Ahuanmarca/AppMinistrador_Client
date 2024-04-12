@@ -9,10 +9,9 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-import data from "./data"
 import CustomTooltipCashFlow from './CustomTooltipCashFlow'
 
-function CashFlowDiagram() {
+function CashFlowDiagram({data}) {
   return (
     <BarChart className={styles.App}
       width={640}
