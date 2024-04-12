@@ -35,7 +35,7 @@ function CashflowHistogram() {
     Ingresos: Number(item.income)
   }));
 
- console.log('cashFlowDataMapped', cashFlowData);
+//  console.log('cashFlowDataMapped', cashFlowData);
 
   
   return (

@@ -68,13 +68,13 @@ function Dashboard() {
                 </PanelGroup>
               </Panel>
               <ResizeHandle />
-              <Panel defaultSize={37} minSize={20}>
+              <Panel >
                 <PanelGroup direction="vertical">
-                  <Panel defaultSize={40} >
+                  <Panel defaultSize={40} minSize={50}>
                     <MonthFees />
                   </Panel>
                   <ResizeHandle />
-                  <Panel defaultSize={60}>
+                  <Panel defaultSize={60} minSize={30}>
                     <Providers /> {/* // TODO: Proveedores */}
                   </Panel>
                 </PanelGroup>
