@@ -59,7 +59,7 @@ function Dashboard() {
             <ResizeHandle />
             <Panel defaultSize={37} minSize={20}>
               <PanelGroup direction="vertical">
-                <Panel defaultSize={40}>
+                <Panel defaultSize={40} >
                   <MonthFees />
                 </Panel>
                 <ResizeHandle />
