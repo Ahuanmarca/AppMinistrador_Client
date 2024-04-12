@@ -39,9 +39,9 @@ function Incidences() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
+      {/* <div className={styles.container}> */}
         <IncidencesTable incidences={incidences}/>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
