@@ -7,8 +7,9 @@
   min-width: 233px;
   display: flex;
   flex-direction: column;
-  border: 2px solid #eceeF6;
-  /*CORRECT COLOR: #ECEEF6*/
+ /* border: 2px solid #ECEEF6; */
+    /*DREA DEBUG*/
+    border: 2px solid red;
   border-radius: 10px;
   outline: none;
   margin: 20px;

@@ -3,7 +3,7 @@
   text-align: center;
   display: flex;
   width: 100%;
-  overflow: auto;
+  /* background-color: chocolate; */
   align-items: center;
   justify-content: center;
   padding: 10px;
