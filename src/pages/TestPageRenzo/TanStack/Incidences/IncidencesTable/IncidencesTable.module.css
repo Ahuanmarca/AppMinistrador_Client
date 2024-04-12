@@ -1,0 +1,28 @@
+
+.container-foo {
+  height: 100%;
+  overflow: scroll;
+}
+
+.container-foo table {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 10.58px;
+}
+
+.container-foo table tbody tr {
+  border: 2px solid red;
+  color: red;
+  height: 36.27px;
+}
+
+.container-foo table thead {
+  font-family: Roboto;
+  background-color: hsl(201deg 20% 89%);
+  font-size: 10.58px;
+  font-weight: 700;
+  height: 36.27px;
+  border: 2px solid red;
+  border-radius: 12px;  
+}
+

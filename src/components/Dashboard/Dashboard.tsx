@@ -106,11 +106,11 @@ function Dashboard() {
   return (
     <div className={styles.PanelGroupWrapper}>
       <PanelGroup direction="vertical">
-        <Panel defaultSize={12}>
+        <Panel defaultSize={10}>
           <DashboardHeader />
         </Panel>
         <ResizeHandle />
-        <Panel defaultSize={88}>
+        <Panel defaultSize={90}>
           <PanelGroup direction="horizontal">
             <Panel defaultSize={63} minSize={50}>
               <PanelGroup direction="vertical">
