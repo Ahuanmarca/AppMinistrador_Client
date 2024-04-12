@@ -1,22 +1,27 @@
 import * as React from 'react';
-import { DashboardContext } from '../../../contexts/DashboardContext'
-import{ Incidence } from '../../../types/Incidence';
+import { DashboardContext } from '../../../../contexts/DashboardContext'
+import { Incidence } from '../../../../types/Incidence';
+import * as debug from './debugHelper';
 import styles from './Incidences.module.css';
+import IncidencesTable from './IncidencesTable';
 import { formatDateTime } from './helpers';
 
-import IncidencesTable from './IncidencesTable';
+const DEBUG = false;
 
 function Incidences() {
-  // @ts-expect-error data is possibly undefined
+  // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
   const { data, error, isLoading } = React.useContext(DashboardContext);
-
+ 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <h1>Loading...</h1>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <h1>Error</h1>;
   }
+
+  // DEBUG && debug.logFirst(data.buildingData.incidences);
+  // DEBUG && debug.testTimeFormatting(data.buildingData.incidences);
 
   const incidences: Array<Incidence> = data.buildingData.incidences.map((incidence) => {
     return {
@@ -28,13 +33,15 @@ function Incidences() {
       user: incidence.users.people.forename,
       status: incidence.status,
     };
-  });
+  });  
 
-  console.debug(incidences[0]);
+  DEBUG && debug.logBuiltIncidenceObject(incidences);
 
   return (
     <div className={styles.wrapper}>
-      <IncidencesTable data={incidences} />
+      <h2>TanStack Sortable Table</h2>
+      <p>TansTack Sortable Table test.</p>
+        <IncidencesTable incidences={incidences}/>
     </div>
   );
 }

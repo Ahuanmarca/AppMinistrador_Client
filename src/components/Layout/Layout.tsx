@@ -20,6 +20,7 @@ import Basic from '../../pages/TestPageRenzo/TanStack/Basic';
 import ColumnGroups from '../../pages/TestPageRenzo/TanStack/ColumnGroups';
 import ColumnOrdering from '../../pages/TestPageRenzo/TanStack/ColumnOrdering';
 import Sorting from '../../pages/TestPageRenzo/TanStack/Sorting';
+import TanStackIncidences from '../../pages/TestPageRenzo/TanStack/Incidences';
 
 function Layout() {
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
@@ -46,6 +47,7 @@ function Layout() {
             <Route path="/renzo/column-groups" element={<ColumnGroups />} />
             <Route path="/renzo/column-ordering" element={<ColumnOrdering />} />
             <Route path="/renzo/sorting" element={<Sorting />} />
+            <Route path="/renzo/tsincidences" element={<TanStackIncidences />} />
           </Route>
         </Routes>
       </main>
