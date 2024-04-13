@@ -31,26 +31,44 @@ function Providers() {
     </div>
     <div className={styles.searchWrapper}>
       <h2 className={styles.searchTitle}>Nombre</h2>
-      { <SearchBarProviders 
+      <SearchBarProviders 
         width={'90%'}
         height={'34px'}
         placeholder={'Ej: Electricista Lumix'}
         onChange={setSearchText}
-        ></SearchBarProviders>}
-      <div className={styles.cardContainer}>
-        {filteredProviders.map(provider => (
-          <ProviderCard 
-            key={provider.id}
-            name={provider.title}
-            img={provider.image_url}
-            phone={provider.phone_number}
-            review={provider.review_count}
-            description={provider.description}>
-          </ProviderCard>
-        ))}
+      >
+      </SearchBarProviders>
+      <div className={styles.wrapper}>
+        <div className={styles.cardContainer}>
+          {filteredProviders.map(provider => (
+              <ProviderCard 
+                key={provider.id}
+                name={provider.title}
+                img={provider.image_url}
+                phone={provider.phone_number}
+                review={provider.review_count}
+                description={provider.description}>
+              </ProviderCard>
+            ))} 
+        </div>
       </div>
-      <div className={styles.empty}></div>
-    </div>
+{/* 
+      // <div className={styles.wrapper}>
+      //   <div className={styles.cardContainer}>
+      //     {filteredProviders.map(provider => (
+      //       <ProviderCard 
+      //         key={provider.id}
+      //         name={provider.title}
+      //         img={provider.image_url}
+      //         phone={provider.phone_number}
+      //         review={provider.review_count}
+      //         description={provider.description}>
+      //       </ProviderCard>
+      //     ))}
+      //   </div> */}
+      </div>
+      {/* <div className={styles.empty}></div>
+    </div> */}
   </div>);
 }
 
