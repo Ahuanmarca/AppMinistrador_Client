@@ -44,8 +44,6 @@ function Incidences() {
     }
   );
 
-  console.debug(incidences[0]);
-
   return (
     <div className={styles.wrapper}>
       <IncidencesTable data={incidences} />

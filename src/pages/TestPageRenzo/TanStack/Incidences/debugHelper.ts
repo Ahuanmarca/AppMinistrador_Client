@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 
 function logFirst(arr) {
-  console.debug({
+  console.log({
     firstElement: arr[0]
   });
 }
@@ -21,7 +21,7 @@ function testTimeFormatting(incidences) {
     'yyyy-MM-dd HH:mm'
   );
 
-  console.debug({
+  console.log({
     testTimeFormatting: {
       title,
       formattedTime,
@@ -34,7 +34,7 @@ function testTimeFormatting(incidences) {
 }
 
 function logBuiltIncidenceObject(incidences) {
-  console.debug(incidences[0]);
+  console.log(incidences[0]);
 }
 
 export {
