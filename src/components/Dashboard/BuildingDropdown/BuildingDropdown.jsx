@@ -2,15 +2,27 @@ import React from 'react';
 import * as Select from '@radix-ui/react-select';
 import classnames from 'classnames';
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
-import {empalme, transits, maritim} from './data';
 import './../BuildingDropdown/builiding.styles.css';
 
-function BuildingDropdown() {
-  const defaultValue = empalme[0].value;
+function BuildingDropdown({ data, updateDashboardData }) {
+  const { Campanar, Empalme, Libertad } = data;
+  const [selectedBuilding, setSelectedBuilding] = React.useState(Campanar[0].value);
+  // const defaultValue = selectedBuilding;
+
+  const handleValueChange = (newOption) => {
+    setSelectedBuilding(() => newOption);
+    updateDashboardData({ buildingId: newOption.label, accountId: newOption.label });
+  }
+
+  console.debug({ 
+    BuildingDropdown: data,
+    selectedBuilding,
+  });
+
   return(
-  <Select.Root>
+  <Select.Root onValueChange={handleValueChange}>
     <Select.Trigger className="SelectTrigger">
-      <Select.Value placeholder={defaultValue}/>
+      <Select.Value placeholder={selectedBuilding} />
       <Select.Icon className="SelectIcon">
         <ChevronDownIcon />
       </Select.Icon>
@@ -21,11 +33,11 @@ function BuildingDropdown() {
           <ChevronUpIcon />
         </Select.ScrollUpButton>
         <Select.Viewport className="SelectViewport">
-          <SelectGroup label="Marítim" options={maritim} />
+          <SelectGroup label="Campanar" options={Campanar} />
           <Select.Separator className="SelectSeparator" />
-          <SelectGroup label="Tránsits" options={transits} />
+          <SelectGroup label="Empalme" options={Empalme} />
           <Select.Separator className="SelectSeparator" />
-          <SelectGroup label="Empalme" options={empalme} />
+          <SelectGroup label="Libertad" options={Libertad} />
         </Select.Viewport>
         <Select.ScrollDownButton className="SelectScrollButton">
           <ChevronDownIcon />
@@ -41,7 +53,7 @@ const SelectGroup = ({ label, options }) => (
   <Select.Group>
     <Select.Label className="SelectLabel">{label}</Select.Label>
     {options.map((option, index) => (
-      <SelectItem key={index} value={option.value} disabled={option.disabled}>
+      <SelectItem key={index} value={option} disabled={option.disabled}>
         {option.value}
       </SelectItem>
     ))}

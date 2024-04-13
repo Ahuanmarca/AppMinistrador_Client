@@ -57,10 +57,7 @@ const columns = [
 
 function Basic() {
   const [data] = React.useState(() => [...defaultData]);
-  // const [data, _setData] = React.useState(() => [...defaultData]);
   const rerender = React.useReducer(() => ({}), {})[1];
-
-  console.debug({ data: exampleData });
 
   const table = useReactTable({
     data,

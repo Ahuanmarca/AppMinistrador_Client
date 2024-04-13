@@ -43,31 +43,34 @@ const DEFAULT_REQUEST = buildEndpoint(
 async function fetcher(endpoint) {
   const response = await fetch(endpoint);
   const json = await response.json();
-  console.debug({ swr: json });
   return json;
 }
 
 function useDashboardData() {
-  
-  function updateDashboardData({
+
+  async function updateDashboardData({
     buildingId = BUILDING_ID,
     accountId = ACCOUNT_ID,
     start = START,
     end = END,
     dateItem = DATE_ITEM,
-  }): void {
+  }): Promise<void> {
+    
     const updatedRequest = buildEndpoint(
       BASE_URL,
-      buildingId,
-      accountId,
+      String(buildingId),
+      String(accountId),
       start,
       end,
       dateItem
     );
-    mutate(updatedRequest);
+    
+    return await mutate(updatedRequest, () => fetcher(updatedRequest), true);
   }
 
-  const { data, error, isLoading } = useSWR(DEFAULT_REQUEST, fetcher);
+  const { data, error, isLoading } = useSWR(DEFAULT_REQUEST, fetcher, {
+    revalidateOnMount: true,
+  });
   return { data, error, isLoading, updateDashboardData };
 }
 
