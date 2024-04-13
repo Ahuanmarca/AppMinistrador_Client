@@ -6,7 +6,7 @@
   min-height: 117px;
   border-radius: 10px;
     /*DREA DEBUG*/
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background-color: darkgray;
   display: flex;
   justify-content: flex-start;

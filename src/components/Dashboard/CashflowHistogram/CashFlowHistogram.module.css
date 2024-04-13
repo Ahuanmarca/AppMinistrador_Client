@@ -7,9 +7,9 @@
   justify-content:space-around;
   flex-direction: column;
   overflow: hidden;
-  /* border: 2px solid #ECEEF6; */
+  border: 1px solid #ECEEF6;
     /*DREA DEBUG*/
-  border: 2px solid red;
+  /* border: 2px solid red; */
   border-radius: 10px;
   outline: none;
   padding: 4px;
