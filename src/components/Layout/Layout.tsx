@@ -1,7 +1,5 @@
-import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import style from './Layout.module.css';
-import { DashboardContext } from '../../contexts/DashboardContext';
 
 import Dashboard from '../Dashboard';
 import Appbar from '../Appbar';
@@ -23,9 +21,6 @@ import Sorting from '../../pages/TestPageRenzo/TanStack/Sorting';
 import TanStackIncidences from '../../pages/TestPageRenzo/TanStack/Incidences';
 
 function Layout() {
-  // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
-  const { data, error, isLoading } = React.useContext(DashboardContext);
-  console.debug({ context: { data, error, isLoading } });
 
   return (
     <div className={style.layoutContainer}>
