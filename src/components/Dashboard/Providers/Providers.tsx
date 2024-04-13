@@ -9,6 +9,7 @@ import ProviderCard from './ProviderCard';
 function Providers() {
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
   const {data, isLoading, error} = React.useContext(DashboardContext)
+  const [searchText, setSearchText] = React.useState('');
   if (isLoading){
     return <h1>Loading</h1>
   }
@@ -17,7 +18,11 @@ function Providers() {
   }
   const providersData = data.providers;
   console.log('providersData', providersData);
-  
+
+  const filteredProviders = providersData.filter(provider =>
+    provider.title.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     // <DashboardPlaceholder placeholderText={"Proveedores"} />
   <div className={styles.container}>
@@ -26,9 +31,14 @@ function Providers() {
     </div>
     <div className={styles.searchWrapper}>
       <h2 className={styles.searchTitle}>Nombre</h2>
-      { <SearchBarProviders width={'90%'} height={'34px'} placeholder={'Ej: Electricista Lumix'}></SearchBarProviders>}
+      { <SearchBarProviders 
+        width={'90%'}
+        height={'34px'}
+        placeholder={'Ej: Electricista Lumix'}
+        onChange={setSearchText}
+        ></SearchBarProviders>}
       <div className={styles.cardContainer}>
-        {providersData.map(provider => (
+        {filteredProviders.map(provider => (
           <ProviderCard 
             key={provider.id}
             name={provider.title}

@@ -2,7 +2,13 @@
 import GlassIcon from './../../../Appbar/Searchbar/MagnifyingGlassIconV2';
 import styles from './SearchBarProviders.module.css';
 
-function SearchBarProviders({placeholder, width, height}) {
+function SearchBarProviders({placeholder, width, height, onChange}) {
+  function handleChange(event){
+    if (onChange) {
+      onChange(event.target.value);
+    }
+  }
+
   return (
   <div className={styles.container} style={{ width: width, height: height }}>
       <div className={styles.icon}>
@@ -12,6 +18,7 @@ function SearchBarProviders({placeholder, width, height}) {
       className={styles.search}
       type="text"
       placeholder={placeholder}
+      onChange={handleChange}
       //"Busca una finca"
     />
   </div>
