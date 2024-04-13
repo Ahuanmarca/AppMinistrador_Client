@@ -4,7 +4,7 @@ import MonthFeesPieChart from "./MonthFeesPieChart";
 import styles from './MonthFees.module.css'
 import {Circles} from 'react-loader-spinner'
 import { DashboardContext } from "../../../contexts/DashboardContext";
-function MonthFees() {
+function MonthFees({height}) {
 
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
   const { data, error, isLoading } = React.useContext(DashboardContext);
@@ -36,7 +36,7 @@ function MonthFees() {
 
   return (
     // <DashboardPlaceholder placeholderText={"Cuotas del mes"} />
-    <div className={styles.container}>
+    <div className={styles.container} style={{height:height}}>
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>Cuotas del mes</h1>
         <h1 className={styles.expenses}>Total: {totalExpenses.toFixed(2)}€</h1>
