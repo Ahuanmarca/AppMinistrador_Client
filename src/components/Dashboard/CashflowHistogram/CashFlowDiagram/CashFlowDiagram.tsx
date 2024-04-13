@@ -28,7 +28,7 @@ const monthNames = {
 };
 
 function CashFlowDiagram({data}) {
-  console.log('data CashflowDiagram', data);
+  // console.log('data CashflowDiagram', data);
 
   const mapMonthName = (monthNumber) => {
     return monthNames[monthNumber];

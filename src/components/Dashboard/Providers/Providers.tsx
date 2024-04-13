@@ -17,7 +17,7 @@ function Providers() {
     return <h1>Error</h1>
   }
   const providersData = data.providers;
-  console.log('providersData', providersData);
+  // console.log('providersData', providersData);
 
   const filteredProviders = providersData.filter(provider =>
     provider.title.toLowerCase().includes(searchText.toLowerCase())
@@ -45,10 +45,8 @@ function Providers() {
                 key={provider.id}
                 name={provider.title}
                 img={provider.image_url}
-                phone={provider.phone_number}
-                // review={provider.review_count}
-                description={provider.description}>
-              </ProviderCard>
+                phone={provider.phone_number}>
+             </ProviderCard>
             ))} 
         </div>
       </div>

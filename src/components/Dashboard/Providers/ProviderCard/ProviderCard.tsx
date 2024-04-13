@@ -4,9 +4,9 @@
 import styles from './ProviderCard.module.css'
 import AvatarCard from '../../PeopleCard/AvatarCard';
 
-function ProviderCard({img, phone, name, description}) {
-  const shortDescription = description.length > 100 ? `${description.substring(0, 70)}...` : description;
-  console.log(shortDescription);
+function ProviderCard({img, phone, name}) {
+  // const shortDescription = description.length > 100 ? `${description.substring(0, 70)}...` : description;
+  // console.log(shortDescription);
   
   return <div className={styles.cardContainer}>
     {/* <img className={styles.img} src={img}></img> */}

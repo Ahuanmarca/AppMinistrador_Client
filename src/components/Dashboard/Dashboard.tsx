@@ -90,6 +90,8 @@ function Dashboard() {
     return <div>Error</div>
   }
   const newData = data;
+  console.log('allData',data);
+  
   const buildingData = {
     owners: Number(newData.ownersCount),
     neighbours: Number(newData.neighboursCount[0].count),
