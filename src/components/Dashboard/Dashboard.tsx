@@ -58,7 +58,7 @@ function Dashboard() {
                   </Panel>
                   <ResizeHandle />
                   <Panel defaultSize={37}>
-                    <CashflowHistogram />
+                    <CashflowHistogram height={'100%'} />
                   </Panel>
                   <ResizeHandle />
                   <Panel>
@@ -70,11 +70,11 @@ function Dashboard() {
               <ResizeHandle />
               <Panel >
                 <PanelGroup direction="vertical">
-                  <Panel defaultSize={57}>
-                    <MonthFees />
+                  <Panel defaultSize={40}>
+                    <MonthFees height={'100%'} />
                   </Panel>
                   <ResizeHandle />
-                  <Panel defaultSize={43}>
+                  <Panel defaultSize={60}>
                     <Providers /> {/* // TODO: Proveedores */}
                   </Panel>
                 </PanelGroup>
@@ -145,7 +145,7 @@ function Dashboard() {
                 </Panel>
                 <ResizeHandle />
                 <Panel defaultSize={37}>
-                  <CashflowHistogram />
+                  <CashflowHistogram height={'100%'} />
                 </Panel>
                 <ResizeHandle />
                 <Panel>
@@ -158,7 +158,7 @@ function Dashboard() {
             <Panel defaultSize={37} minSize={20}>
               <PanelGroup direction="vertical">
                 <Panel defaultSize={40} >
-                  <MonthFees />
+                  <MonthFees height={'100%'} />
                 </Panel>
                 <ResizeHandle />
                 <Panel defaultSize={60}>

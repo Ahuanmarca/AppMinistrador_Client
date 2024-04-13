@@ -5,14 +5,14 @@ import styles from './CashFlowHistogram.module.css';
 import { DashboardContext } from "../../../contexts/DashboardContext";
 // import {Circles} from 'react-loader-spinner';
 
-function CashflowHistogram() {
+function CashflowHistogram({height}) {
 
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
   const {data, isLoading, error} = React.useContext(DashboardContext);
 
   if (isLoading) {
     // return <div className={styles.loading}><Circles color='var(--brand-color-main)'></Circles></div>
-    return <div className={styles.container}>
+    return <div className={styles.container} style={{height: height}}>
             <div className={styles.titleContainer}>
               <h1 className={styles.title}>Ingresos vs. Gastos</h1>
             </div>
@@ -20,8 +20,6 @@ function CashflowHistogram() {
               <CashFlowDiagram data={data}></CashFlowDiagram>
             </div>
           </div>
-
-
   }
 
   if (error) {

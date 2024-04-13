@@ -16,10 +16,10 @@
   height: 100%;
 }
 
-.handle{
-  color: red;
+/* .handle{
+  /* color: red;
   stroke: blue;
-}
+} */
 
 .data {
   /* background-color: red; */
@@ -34,4 +34,43 @@
   padding-bottom: 5px;
   padding-top: 20px;
   /* background-color: aqua; */
+}
+
+.tabGroup{
+  /* background-color: red; */
+  /* color: black; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.button{
+  /* background-color: blue;
+  width: 33%;
+  height: 100%;
+  color: white; */
+  height: 40px;
+  width: 140px;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--brand-color-main);
+  background-color: var(--appbar-color);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button:hover{
+  background-color: var(--brand-color-main);
+  color: var(--appbar-color);
+}
+
+.button:hover svg path {
+  fill: var(--appbar-color); /* Color de relleno al hacer hover */
 }
