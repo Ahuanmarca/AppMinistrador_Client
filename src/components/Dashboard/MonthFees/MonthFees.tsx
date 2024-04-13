@@ -39,7 +39,7 @@ function MonthFees() {
     <div className={styles.container}>
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>Cuotas del mes</h1>
-        <h1 className={styles.expenses}>Total: {totalExpenses}€</h1>
+        <h1 className={styles.expenses}>Total: {totalExpenses.toFixed(2)}€</h1>
       </div>
       <MonthFeesPieChart data={chartData}></MonthFeesPieChart>
     </div>
