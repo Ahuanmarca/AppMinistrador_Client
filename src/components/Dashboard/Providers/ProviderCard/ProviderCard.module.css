@@ -1,36 +1,59 @@
 .cardContainer{
-  width: 100%;
+  font-size: 3px;
+  /* width: 100%; */
   /* background-color: red; */
   /* height: 100%; */
-  max-height: 400px;
+  /* max-height: 400px; */
   /* max-height: 60px;
   overflow-y: auto; */
   /* border: 2px solid grey; */
-  border-radius: 10px;
-  margin-top: 5px;
+  /* border-radius: 10px; */
+  /* margin-top: 5px; */
   /* background-color: pink; */
-  display: flex;
+  /* display: flex; */
   /* overflow-y: auto; */
-  flex-direction: row;
-  background-color: #ffffff;
-  box-shadow: 2px 10px 17px 0px #efeeee;
+  /* flex-direction: row; */
+  /* background-color:; */
+  /*  */
   /* overflow-y: scroll; */
   /* overflow:hidden; */
-}
-
-.img{
-  width: 60px;
-  height: 60px;
-}
-
-.avatar{
-  width: 59px;
-  height: 59px;
-}
-
-.wrapper{
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 101px;
+  background-color:  #ffffff;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  border-radius: 10px;
+  box-shadow: 2px 10px 17px 0px #efeeee;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.avatar{
+  width: 70px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.name {
+  font-size: 13px;
+  color: var(--brand-color-main);
+  /* height: 100%; */
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+}
+.phone{
+  color: var(--color-neutro);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.wrapper{
   width: 100%;
   height: 100%;
-}
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+} 

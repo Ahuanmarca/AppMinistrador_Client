@@ -46,7 +46,7 @@ function Providers() {
                 name={provider.title}
                 img={provider.image_url}
                 phone={provider.phone_number}
-                review={provider.review_count}
+                // review={provider.review_count}
                 description={provider.description}>
               </ProviderCard>
             ))} 
