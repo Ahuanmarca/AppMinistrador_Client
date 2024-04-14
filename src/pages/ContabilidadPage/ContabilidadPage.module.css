@@ -72,5 +72,6 @@
 }
 
 .button:hover svg path {
-  fill: var(--appbar-color); /* Color de relleno al hacer hover */
+  fill: var(--appbar-color);
+  stroke: var(--appbar-color) ;
 }
