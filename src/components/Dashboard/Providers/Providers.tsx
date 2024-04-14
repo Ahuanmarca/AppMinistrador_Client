@@ -5,19 +5,45 @@ import styles from './Providers.module.css'
 import SearchBarProviders from './SearchBarProviders';
 import { DashboardContext } from '../../../contexts/DashboardContext';
 import ProviderCard from './ProviderCard';
+import { Circles } from 'react-loader-spinner';
 
 function Providers() {
   // @ts-expect-error -- Property 'isLoading' does not exist on type '{}'.ts(2339)
   const {data, isLoading, error} = React.useContext(DashboardContext)
   const [searchText, setSearchText] = React.useState('');
   if (isLoading){
-    return <h1>Loading</h1>
+  // const providersData = []
+  // const filteredProviders = providersData.filter(provider =>
+    // provider.title.toLowerCase().includes(searchText.toLowerCase())
+  // );
+    return (
+    <div className={styles.container}>
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>Proveedores</h1>
+      </div>
+      <div className={styles.searchWrapper}>
+        <h2 className={styles.searchTitle}>Nombre</h2>
+        <SearchBarProviders 
+          width={'90%'}
+          height={'34px'}
+          placeholder={'Ej: Electricista Lumix'}
+          onChange={setSearchText}
+        >
+        </SearchBarProviders>
+        <div className={styles.wrapper}>
+          <div className={styles.cardContainer}>
+          <div className={styles.spinner}> 
+          <Circles color='var(--brand-color-main)' height={50} width={50}></Circles> </div>
+          </div>
+        </div>
+        </div>
+    </div>);
   }
   if(error){
     return <h1>Error</h1>
   }
   const providersData = data.providers;
-  console.log('providersData', providersData);
+  // console.log('providersData', providersData);
 
   const filteredProviders = providersData.filter(provider =>
     provider.title.toLowerCase().includes(searchText.toLowerCase())
@@ -45,10 +71,8 @@ function Providers() {
                 key={provider.id}
                 name={provider.title}
                 img={provider.image_url}
-                phone={provider.phone_number}
-                // review={provider.review_count}
-                description={provider.description}>
-              </ProviderCard>
+                phone={provider.phone_number}>
+             </ProviderCard>
             ))} 
         </div>
       </div>

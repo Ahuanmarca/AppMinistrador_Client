@@ -1,0 +1,17 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+
+  align-items: center;
+  display: flex;
+  height: unset;
+  min-height: calc(100% - 3.5rem);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: hsl(0deg, 0%, 0% / 0.75);
+}
+
+/* The children of this modal must have relative position */

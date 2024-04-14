@@ -13,13 +13,6 @@ import ConfiguracionPage from '../../pages/ConfiguracionPage';
 import AyudaPage from '../../pages/AyudaPage';
 import PerfilPage from '../../pages/PerfilPage';
 
-// Test pages / components
-import Basic from '../../pages/TestPageRenzo/TanStack/Basic';
-import ColumnGroups from '../../pages/TestPageRenzo/TanStack/ColumnGroups';
-import ColumnOrdering from '../../pages/TestPageRenzo/TanStack/ColumnOrdering';
-import Sorting from '../../pages/TestPageRenzo/TanStack/Sorting';
-import TanStackIncidences from '../../pages/TestPageRenzo/TanStack/Incidences';
-
 function Layout() {
 
   return (
@@ -37,13 +30,6 @@ function Layout() {
           <Route path="/configuracion"  element={<ConfiguracionPage />} />
           <Route path="/ayuda"          element={<AyudaPage />} />
           <Route path="/perfil"         element={<PerfilPage />} />
-          <Route path="/renzo">
-            <Route path="/renzo/basic" element={<Basic />} />
-            <Route path="/renzo/column-groups" element={<ColumnGroups />} />
-            <Route path="/renzo/column-ordering" element={<ColumnOrdering />} />
-            <Route path="/renzo/sorting" element={<Sorting />} />
-            <Route path="/renzo/tsincidences" element={<TanStackIncidences />} />
-          </Route>
         </Routes>
       </main>
       <aside className={style.sidebarContainer}>
