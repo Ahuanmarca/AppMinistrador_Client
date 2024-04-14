@@ -2,14 +2,19 @@
 import GoogleSignin from "../../../public/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../../firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
-import {GoogleAuthProvider, signInWithRedirect} from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  // signInWithRedirect,
+  signInWithPopup} from "firebase/auth";
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
 
-  const googleSignIn = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithRedirect(auth, provider);
+  const googleSignIn = async () => {
+    // const provider = new GoogleAuthProvider();
+    // signInWithRedirect(auth, provider);
+    const userCred = await signInWithPopup(auth, new GoogleAuthProvider());
+    console.log(userCred);
   };
 
   const signOut = () => {
