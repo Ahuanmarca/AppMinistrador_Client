@@ -36,6 +36,7 @@ const ChatBox = () => {
 
   return (
     <main className="chat-box">
+      {/* <div className="container"> */}
       <div className="messages-wrapper">
         {messages?.map((message) => (
           <Message key={message.id} message={message} />
@@ -44,6 +45,7 @@ const ChatBox = () => {
       {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
       <span ref={scroll}></span>
       <SendMessage scroll={scroll} />
+      {/* </div> */}
     </main>
   );
 };

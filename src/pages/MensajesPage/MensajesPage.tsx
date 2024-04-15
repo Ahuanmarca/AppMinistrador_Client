@@ -7,7 +7,6 @@ import NavBar from "../../components/Chat/NavBar.jsx"
 import ChatBox from "../../components/Chat/ChatBox.jsx"
 import Welcome from "../../components/Chat/Welcome.jsx"
 
-
 function MensajesPage() {
   const [user] = useAuthState(auth);
 
