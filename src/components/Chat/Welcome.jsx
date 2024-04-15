@@ -1,8 +1,7 @@
 import React from "react";
-// import GoogleSignin from "../../../public/btn_google_signin_dark_pressed_web.png";
 import Google from "../Icons/GoogleIcon/Google.png"
-// import Google from "../../../public/Google.png"
 import { auth } from "../../firebase";
+import styles from '../../pages/MensajesPage/MensajesPage.module.css';
 import {
   GoogleAuthProvider,
   // signInWithRedirect,
@@ -17,11 +16,11 @@ const Welcome = () => {
   };
 
   return (
-    <main className="welcome">
+    <main className={styles.welcome}>
       <h2>Bienvenido al chat de AppMinistrador.</h2>
       {/* <img src="/logo512.png" alt="ReactJs logo" width={50} height={50} /> */}
       <p>Inicia sesión con tu cuenta para chatear con los vecinos.</p>
-      <button className="sign-in">
+      <button className={styles.signIn}>
         <img
           onClick={googleSignIn}
           src={Google}
