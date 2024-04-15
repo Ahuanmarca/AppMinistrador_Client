@@ -84,6 +84,7 @@ input {
   height: 100%;
   /* background-color: royalblue; */
   overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
 .chatBubble {
   border-radius: 20px 20px 20px 0;
