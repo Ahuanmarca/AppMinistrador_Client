@@ -9,6 +9,8 @@ import {
 import { db } from "../../firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
+import styles from '../../pages/MensajesPage/MensajesPage.module.css';
+
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
@@ -35,9 +37,9 @@ const ChatBox = () => {
   }, []);
 
   return (
-    <main className="chat-box">
+    <main className={styles.chatBox}>
       {/* <div className="container"> */}
-      <div className="messages-wrapper">
+      <div className={styles.messagesWrapper}>
         {messages?.map((message) => (
           <Message key={message.id} message={message} />
         ))}

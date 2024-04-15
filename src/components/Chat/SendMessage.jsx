@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { auth, db } from "../../firebase";
 import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import styles from '../../pages/MensajesPage/MensajesPage.module.css';
 
 const SendMessage = ({scroll}) => {
   const [message, setMessage] = useState("")
@@ -24,7 +25,7 @@ const SendMessage = ({scroll}) => {
   };
   
   return (
-    <form className="send-message" onSubmit={(event) => sendMessage(event)} autocomplete="off">
+    <form className={styles.sendMessage} onSubmit={(event) => sendMessage(event)} autocomplete="off">
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>
