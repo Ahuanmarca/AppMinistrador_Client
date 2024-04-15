@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { DashboardProvider } from '../../contexts/DashboardContext';
+import RequireLogin from '../RequireLogin';
 
 import Layout from '../Layout';
 
@@ -15,16 +16,25 @@ function App() {
     <BrowserRouter>
       <DashboardProvider>
         <Routes>
-          <Route path="/hello" element={<div>hello, world</div>} />
+          <Route path="/login" element={<AuthForm />} />
           <Route path="/tester">
             <Route path="/tester/basic" element={<Basic />} />
             <Route path="/tester/incidences" element={<Incidences />} />
             <Route path="/tester/sorting" element={<Sorting />} />
-            <Route path="/tester/reportincidence" element={<ReportIncidence />} />
-            <Route path="/tester/login" element={<AuthForm />} />
+            <Route
+              path="/tester/reportincidence"
+              element={<ReportIncidence />}
+            />
           </Route>
-          <Route path="*" element={<Layout />} />
-        </Routes>        
+          <Route
+            path="*"
+            element={
+              <RequireLogin>
+                <Layout />
+              </RequireLogin>
+            }
+          />
+        </Routes>
       </DashboardProvider>
     </BrowserRouter>
   );
