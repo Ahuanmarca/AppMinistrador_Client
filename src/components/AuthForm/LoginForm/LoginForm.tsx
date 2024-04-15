@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import * as Form from '@radix-ui/react-form';
 import useToggle from '../../../hooks/use-toggle.hook';
 import styles from './LoginForm.module.css';
@@ -11,6 +12,8 @@ function LoginForm() {
     username: '',
     password: '',
   }));
+  const navigate = useNavigate();
+  const location = useLocation();
 
   type Status = 'idle' | 'loading' | 'success' | 'error';
   const [status, setStatus] = React.useState<Status>('idle');
@@ -41,6 +44,10 @@ function LoginForm() {
         localStorage.token = json.token;
         setStatus('success');
         setFormValues({ username: '', password: '' });
+
+        const queryParams = new URLSearchParams(location.search);
+        const redirectPath = queryParams.get('redirect') || '/';
+        navigate(redirectPath);
       } else {
         delete localStorage.token;
         setStatus('error');
