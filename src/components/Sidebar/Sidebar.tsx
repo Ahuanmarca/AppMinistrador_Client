@@ -1,6 +1,6 @@
-import * as React from 'react';
+// import * as React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './Sidebar.module.css';
-import { useNavigate } from 'react-router-dom';
 
 import DashboardIcon from './icons/DashboardIcon';
 import IncidentIcon from './icons/IncidentIcon';
@@ -12,28 +12,26 @@ import Brand from './Brand';
 import Tab from './Tab';
 
 function Sidebar() {
-  const [activeTab, setActiveTab] = React.useState(0);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const TABS = [
-    { to: '/dashboard',     icon: DashboardIcon,  title: 'Dashboard',     isActive: true },
-    { to: '/incidencias',   icon: IncidentIcon,   title: 'Incidencias',   isActive: false },
-    { to: '/contabilidad',  icon: FinanceIcon,    title: 'Contabilidad',  isActive: false },
-    { to: '/mensajes',      icon: MessageIcon,    title: 'Mensajes',      isActive: false },
+    { to: '/dashboard',     icon: DashboardIcon,  title: 'Dashboard' },
+    { to: '/incidencias',   icon: IncidentIcon,   title: 'Incidencias' },
+    { to: '/contabilidad',  icon: FinanceIcon,    title: 'Contabilidad' },
+    { to: '/mensajes',      icon: MessageIcon,    title: 'Mensajes' },
   ];
 
   const MENU_ITEMS = [
-    { to: '/configuracion', icon: SettingsIcon,   title: 'Configuración', isActive: false },
-    { to: '/ayuda',         icon: HelpIcon,       title: 'Ayuda',         isActive: false },
+    { to: '/configuracion', icon: SettingsIcon,   title: 'Configuración' },
+    { to: '/ayuda',         icon: HelpIcon,       title: 'Ayuda' },
   ]
 
-  function handleTabClick(index: number, to: string) {
+  function handleTabClick( to: string) {
     navigate(to);
-    setActiveTab(index);
   }
 
   function handleMenuItemClick(to: string) {
-    setActiveTab(-1);
     navigate(to);
   }
 
@@ -48,8 +46,8 @@ function Sidebar() {
                 key={index}
                 icon={tab.icon}
                 title={tab.title}
-                isActive={activeTab === index}
-                handleClick={() => handleTabClick(index, tab.to)}
+                isActive={location.pathname === tab.to}
+                handleClick={() => handleTabClick(tab.to)}
               />
             );
           })}
@@ -63,7 +61,7 @@ function Sidebar() {
                 key={index}
                 icon={item.icon}
                 title={item.title}
-                isActive={false}
+                isActive={location.pathname === item.to}
                 handleClick={() => handleMenuItemClick(item.to)}
               />
             );

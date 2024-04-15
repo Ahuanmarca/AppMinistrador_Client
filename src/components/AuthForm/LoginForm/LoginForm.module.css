@@ -1,0 +1,61 @@
+
+.wrapper {
+  height: 100svh;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormRoot {
+  min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.FormField {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.TextInput {
+  border: 1px solid #024B59;
+  cursor: text;
+  padding: 0.5rem;
+}
+
+.PasswordInput {
+  border: 1px solid #024B59;
+  padding: 0.5rem;
+ 
+  display: flex;
+  align-items: center;
+
+  input {
+    cursor: text;
+    width: 92%;
+  }
+}
+
+.ErrorMessage {
+  color: var(--color-principal);
+  font-size: 0.8rem;
+}
+
+.Submit {
+  width: 224px;
+  height: 48px;
+  background-color: #024B59;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+}
