@@ -170,11 +170,12 @@ input {
   justify-content: center;
   width: 70px;
   height: 40px;
+  margin-left: 2px;
   padding: 5px 10px;
   border-radius: 20px;
-  color: #242443;
+  color: whitesmoke;
   border: 1px solid #7cc5d9;
-  background-color: #7cc5d9;
+  background-color: var(--brand-color-main);
   font-weight: 600;
 }
 
