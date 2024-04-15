@@ -27,7 +27,7 @@ function Sidebar() {
     { to: '/ayuda',         icon: HelpIcon,       title: 'Ayuda' },
   ]
 
-  function handleTabClick(index: number, to: string) {
+  function handleTabClick( to: string) {
     navigate(to);
   }
 
@@ -47,7 +47,7 @@ function Sidebar() {
                 icon={tab.icon}
                 title={tab.title}
                 isActive={location.pathname === tab.to}
-                handleClick={() => handleTabClick(index, tab.to)}
+                handleClick={() => handleTabClick(tab.to)}
               />
             );
           })}
