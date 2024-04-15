@@ -8,9 +8,9 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100%;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: var(--font-Roboto);
 }
 
 button,
@@ -20,9 +20,9 @@ input {
 
 .App {
   width: 100%;
-  min-height: 100vh;
-  background-color: #1c2c4c;
-  color: #4c768d;
+  min-height: 100%;
+  background-color: var(--brand-color-main);
+  color: var(--cashflow-expenses);
   padding-top: 60px;
 }
 
@@ -32,14 +32,20 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4c768d;
+  background-color:  transparent;
   color: #242443;
   height: 60px;
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 80%;
+  right: 0;
+  top: 20px;
   width: 100%;
   z-index: 1;
+}
+.title-bar{
+  color:transparent;
+  user-select: none;
+  width: 50px;
 }
 .sign-in {
   border: none;
@@ -52,9 +58,9 @@ input {
 .sign-out {
   padding: 5px 10px;
   border-radius: 5px;
-  color: #88dded;
-  border: 1px solid #1c2c4c;
-  background-color: #1c2c4c;
+  color: whitesmoke;
+  /* border: 1px solid #1c2c4c; */
+  background-color: var(--cashflow-expenses);
   font-weight: 600;
 }
 
@@ -63,7 +69,7 @@ input {
   padding: 30px;
   text-align: center;
   margin-top: 40px;
-  color: #7cc5d9;
+  color: whitesmoke;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
@@ -77,7 +83,7 @@ input {
 .chat-bubble {
   border-radius: 20px 20px 20px 0;
   padding: 15px;
-  background-color: #7cc5d9;
+  background-color: white;
   color: #1c2c4c;
   width: max-content;
   max-width: calc(100% - 50px);
@@ -89,7 +95,8 @@ input {
 .chat-bubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
-  background-color: #fff;
+  background-color: #80cde2;
+  
   box-shadow: -2px 2px 1px 1px #88dded;
 }
 .chat-bubble__left {
@@ -115,19 +122,32 @@ input {
 /* send message */
 .send-message {
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
+  left: 20;
+  /* left: 13%; */
+  /* right: 10%; */
   width: 100%;
   padding: 20px 30px;
-  background-color: #4c768d;
+  /*VERSION 1*/
+  background-color: var(--searchbar-color);
+  
+  /*VERSION 2*/
+  /* background-color: var(--sidebar-color); */
+
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .send-message > input {
   height: 40px;
+  width: 50%;
   padding: 10px 10px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 25px;
   border: none;
-  flex-grow: 1;
-  background-color: white;
+  margin-right: 5px;
+  /* flex-grow: 1; */
+  /*VERSION 1*/
+  background-color: var( --appbar-color);
   color: #1c2c4c;
   font-size: 1rem;
 }
@@ -139,10 +159,13 @@ input {
   border-bottom: 1px solid #7cc5d9;
 }
 .send-message > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 70px;
   height: 40px;
   padding: 5px 10px;
-  border-radius: 0 5px 5px 0;
+  border-radius: 20px;
   color: #242443;
   border: 1px solid #7cc5d9;
   background-color: #7cc5d9;

@@ -1,5 +1,7 @@
 import React from "react";
-import GoogleSignin from "../../../public/btn_google_signin_dark_pressed_web.png";
+// import GoogleSignin from "../../../public/btn_google_signin_dark_pressed_web.png";
+import Google from "../Icons/GoogleIcon/Google.png"
+// import Google from "../../../public/Google.png"
 import { auth } from "../../firebase";
 import {
   GoogleAuthProvider,
@@ -22,7 +24,7 @@ const Welcome = () => {
       <button className="sign-in">
         <img
           onClick={googleSignIn}
-          src={GoogleSignin}
+          src={Google}
           alt="sign in with google"
           type="button"
         />

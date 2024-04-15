@@ -16,6 +16,8 @@
     --tooltip-color: rgba(249, 249, 249, 0.8) ; 
     --cashflow-expenses: #577B91;
     --cashflow-income: rgba(88, 124, 146, 0.4);
+    /*ChatApp*/
+    --chat-color: #e2e3e2b8;
 
   /* from react-resizable-panels library */
   --color-resize-bar-drag: #39414d;
