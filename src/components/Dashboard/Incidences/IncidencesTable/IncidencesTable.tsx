@@ -1,10 +1,9 @@
 // import * as React from 'react';
 import styles from './IncidencesTable.module.css';
 import * as ScrollArea from '@radix-ui/react-scroll-area';
+import StatusButton from './StatusButton';
 
-
-
-export default function IncidencesTable({ data }) {
+function IncidencesTable({ data }) {
   return (
     <ScrollArea.Root className={styles.ScrollAreaRoot}>
       <ScrollArea.Viewport className={styles.ScrollAreaViewport}>
@@ -36,7 +35,7 @@ export default function IncidencesTable({ data }) {
                 <td>{incidence.category}</td>
                 <td>{incidence.user}</td>
                 <td>
-                  <Status status={incidence.status} />
+                  <StatusButton id={incidence.id} status={incidence.status} />
                 </td>
               </tr>
             ))}
@@ -53,24 +52,4 @@ export default function IncidencesTable({ data }) {
   );
 }
 
-function Status({ status = 'pendiente' }) {
-  return (
-    <div
-      style={{
-        height: '20px',
-        width: '84px',
-        borderRadius: '12px',
-        backgroundColor: status === 'pendiente' ? '#C33F38' : '#0C6638',
-        color: 'white',
-        cursor: 'pointer',
-        userSelect: 'none',
-
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <p>Pendiente</p>
-    </div>
-  );
-}
+export default IncidencesTable;
