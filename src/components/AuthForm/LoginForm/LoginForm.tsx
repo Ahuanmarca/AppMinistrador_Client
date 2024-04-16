@@ -13,7 +13,7 @@ function LoginForm() {
     password: '',
   }));
   const navigate = useNavigate();
-  const location = useLocation();
+  const location = useLocation(); // remember location to redirect after login
 
   type Status = 'idle' | 'loading' | 'success' | 'error';
   const [status, setStatus] = React.useState<Status>('idle');
@@ -42,9 +42,11 @@ function LoginForm() {
 
       if (json.token) {
         localStorage.token = json.token;
+        localStorage.user = JSON.stringify(json.user);
         setStatus('success');
         setFormValues({ username: '', password: '' });
 
+        // redirect to the path stored in the query string
         const queryParams = new URLSearchParams(location.search);
         const redirectPath = queryParams.get('redirect') || '/';
         navigate(redirectPath);
