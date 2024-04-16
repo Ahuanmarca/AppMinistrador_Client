@@ -49,3 +49,16 @@
 input {
   font-family: var(--font-Roboto);
 }
+
+.flex-center-within {
+  height: 100%;
+  width: 100%;
+  border: 2px dashed var(--color-principal);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: var(--color-primario);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
