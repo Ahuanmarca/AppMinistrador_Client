@@ -5,6 +5,7 @@
   justify-content:flex-start; 
   align-items: center;
   background-color: var(--searchbar-color);
+  /* background-color: red; */
   color: var(--searchbar-placeholder-color);
   width: 625px;
   height: 48px;

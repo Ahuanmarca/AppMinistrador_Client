@@ -8,7 +8,7 @@ function DashboardProvider({ children }) {
   const { data, error, isLoading, updateDashboardData } = useDashboardData();
 
   const [internalState, setIntetnalState] = React.useState(data);
-  
+
   React.useEffect(() => {
     setIntetnalState(data);
   }, [data]);
@@ -17,9 +17,16 @@ function DashboardProvider({ children }) {
     const newData = await updateDashboardData({ buildingId, accountId });
     setIntetnalState(() => newData);
   }
-  
+
   return (
-    <DashboardContext.Provider value={{ data: internalState ? internalState : data, error, isLoading, updateDashboardData: updateInternalState }}>
+    <DashboardContext.Provider
+      value={{
+        data: internalState ? internalState : data,
+        error,
+        isLoading,
+        updateDashboardData: updateInternalState,
+      }}
+    >
       {children}
     </DashboardContext.Provider>
   );
