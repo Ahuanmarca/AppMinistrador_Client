@@ -47,11 +47,12 @@ function IncidenciasPage() {
           </div>
         </Panel>
       </PanelGroup>
-      {isReportModalVisible && <Modal 
+      {isReportModalVisible && <Modal
+        title="Reportar Incidencia" 
         handleDismiss={toggleIsReportModalVisible}
       >
         <ReportIncidence
-        
+          handleDismiss={toggleIsReportModalVisible} 
         />
       </Modal>}
     </div>
