@@ -3,8 +3,8 @@ import * as Form from '@radix-ui/react-form';
 import styles from './ReportIncidence.module.css';
 import { DashboardContext } from '../../contexts/DashboardContext';
 
-// const ENDPOINT = 'https://appministrador-server-tob7.onrender.com/incidences/create';
-const ENDPOINT = 'http://localhost:8000/incidences/create';
+const ENDPOINT = 'https://appministrador-server-tob7.onrender.com/incidences/create';
+// const ENDPOINT = 'http://localhost:8000/incidences/create';
 
 const CATEGORIES = [
   'Ascensor',
