@@ -5,6 +5,7 @@
   background-color: var(--brand-color-main);
   color: var(--white);
   cursor: pointer;
+  user-select: none;
 
   display: flex;
   align-items: center;
