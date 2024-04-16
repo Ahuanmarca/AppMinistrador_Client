@@ -1,17 +1,67 @@
 .wrapper {
   position: fixed;
   inset: 0;
+  display: grid;
+  place-content: center;
+  padding: 16px;
 
-  align-items: center;
-  display: flex;
-  height: unset;
-  min-height: calc(100% - 3.5rem);
+  /* align-items: center; */
+  /* height: unset; */
+  /* min-height: calc(100% - 3.5rem); */
 }
 
 .backdrop {
   position: absolute;
   inset: 0;
-  background: hsl(0deg, 0%, 0% / 0.75);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* The children of this modal must have relative position */
+.dialog {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  color: white;
+  transform: translateY(-100%);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+/* .wrapper {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  padding: 16px;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: hsl(0deg 0% 0% / 0.75);
+}
+.dialog {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  padding: 32px;
+}
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  color: white;
+  transform: translateY(-100%);
+  cursor: pointer;
+  background: transparent;
+  border: none
+} */

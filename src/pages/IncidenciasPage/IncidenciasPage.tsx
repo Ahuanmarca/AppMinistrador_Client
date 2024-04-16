@@ -1,5 +1,4 @@
 // import * as React from 'react';
-// import PagePlaceholder from "../PagePlaceholder";
 import Incidences from '../../components/Dashboard/Incidences';
 import styles from './IncidenciasPage.module.css';
 import { PanelGroup, Panel } from 'react-resizable-panels';
@@ -7,8 +6,15 @@ import { PanelGroup, Panel } from 'react-resizable-panels';
 import ResizeHandle from '../../components/Dashboard/ResizeHandle';
 // TODO: Refactor IncidentIcon to be a component that can be used in any page
 import IncidentIcon from '../../components/Sidebar/icons/IncidentIcon';
+import useToggle from '../../hooks/use-toggle.hook';
+import Modal from '../../components/Modal';
+import ReportIncidence from '../../components/ReportIncidence';
 
 function IncidenciasPage() {
+  // const [selectedIncidence, setSelectedIncidence] = React.useState(0);
+  const [isReportModalVisible, toggleIsReportModalVisible] = useToggle(false);
+
+
   return (
     <div className={styles.Wrapper}>
       <h2>Incidencias</h2>
@@ -29,6 +35,8 @@ function IncidenciasPage() {
                 <div className={styles.TabGroup}>
                   <button
                     className={styles.ReportButton}
+                    // @ts-expect-error -- Type 'boolean | (() => void)' is not assignable to type 'MouseEventHandler<HTMLButtonElement>'. Type 'boolean is not assignable to type 'MouseEventHandler<HTMLButtonElement>'.ts(2322)
+                    onClick={toggleIsReportModalVisible}
                   >
                     <IncidentIcon></IncidentIcon>
                     Reportar Incidencia
@@ -39,6 +47,14 @@ function IncidenciasPage() {
           </div>
         </Panel>
       </PanelGroup>
+      {isReportModalVisible && <Modal
+        title="Reportar Incidencia" 
+        handleDismiss={toggleIsReportModalVisible}
+      >
+        <ReportIncidence
+          handleDismiss={toggleIsReportModalVisible} 
+        />
+      </Modal>}
     </div>
   );
 }
