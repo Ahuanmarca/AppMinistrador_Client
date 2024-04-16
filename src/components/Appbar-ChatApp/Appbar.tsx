@@ -10,7 +10,7 @@ function Appbar() {
     <>
       <div className={styles.container}>
         {/* <div className={styles.searchBarWrapper}>
-            <SearchBar width={'625px'} height={'48px'} placeholder={"Busca una finca"}></SearchBar>
+            <SearchBar width={'625px'} height={'48px'} placeholder={"Busca una finca..."}></SearchBar>
         </div> */}
         <div className={styles.wrapper}>
           {/* <Bell></Bell>

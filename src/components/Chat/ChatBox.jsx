@@ -11,7 +11,6 @@ import Message from "./Message";
 import SendMessage from "./SendMessage";
 import styles from '../../pages/MensajesPage/MensajesPage.module.css';
 
-
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
@@ -33,21 +32,25 @@ const ChatBox = () => {
       );
       setMessages(sortedMessages);
     });
-    return () => unsubscribe;
+
+    return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (scroll.current) {
+      scroll.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   return (
     <main className={styles.chatBox}>
-      {/* <div className="container"> */}
       <div className={styles.messagesWrapper}>
         {messages?.map((message) => (
           <Message key={message.id} message={message} />
         ))}
+        <span ref={scroll}></span>
       </div>
-      {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
-      <span ref={scroll}></span>
-      <SendMessage scroll={scroll} />
-      {/* </div> */}
+      <SendMessage />
     </main>
   );
 };
