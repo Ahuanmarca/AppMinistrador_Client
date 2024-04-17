@@ -1,28 +1,68 @@
 
-.wrapper {
-  height: 100svh;
-  height: 100vh;
-  width: 100%;
+/* .wrapper { */
+  /* height: 100svh; */
+  /* height: 100vh; */
+  /* width: 100%; */
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* position: relative; */
+/* } */
+
+/* .FormContainer { */
+  /* width: 100%; */
+  /* max-width: 400px; */
+  /* padding: 1rem; */
+  /* background-color: white; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  /* position: relative; */
+/* } */
 
 .FormRoot {
+  min-width: 320px;
+  
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
 .FormField {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
+}
+
+.Title {
+  height: 90px;
+}
+
+.Description {
+  height: 180px;
+}
+
+.Category {
+  height: 120px;
 }
 
 .TextInput {
   border: 1px solid #024B59;
+  cursor: text;
   padding: 0.5rem;
+}
+
+.Dropdown {
+  border: 1px solid #024B59;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.ErrorMessage {
+  color: var(--color-principal);
+  font-size: 0.8rem;
 }
 
 .Submit {
@@ -33,4 +73,5 @@
   border-radius: 25px;
   text-align: center;
   font-size: 16px;
+  cursor: pointer;
 }

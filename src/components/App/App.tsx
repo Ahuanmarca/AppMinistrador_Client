@@ -8,7 +8,6 @@ import Layout from '../Layout';
 import Basic from '../../pages/TestPageRenzo/TanStack/Basic';
 import Incidences from '../../pages/TestPageRenzo/TanStack/Incidences';
 import Sorting from '../../pages/TestPageRenzo/TanStack/Sorting';
-import ReportIncidence from '../ReportIncidence';
 import AuthForm from '../AuthForm';
 
 function App() {
@@ -21,10 +20,6 @@ function App() {
             <Route path="/tester/basic" element={<Basic />} />
             <Route path="/tester/incidences" element={<Incidences />} />
             <Route path="/tester/sorting" element={<Sorting />} />
-            <Route
-              path="/tester/reportincidence"
-              element={<ReportIncidence />}
-            />
           </Route>
           <Route
             path="*"
