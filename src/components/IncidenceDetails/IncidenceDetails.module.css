@@ -1,0 +1,69 @@
+.Container {
+  /* Prevent this container from growing out of it's parent */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px var(--black-a7);
+
+}
+
+.Address {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  color: #024B59;
+  line-height: 22px;
+}
+
+.ImageContainer {
+  width: 300px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--black-a7);
+}
+
+.Image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.Tittle {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 20px;
+  color: #024B59;
+  line-height: 24px;
+}
+
+.StatusButton button {
+  font-size: 0.8rem;
+}
+
+.Description {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #4E4E4E;
+}
+
+.FieldLabel {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4E4E4E;
+}
+
+.FieldValue {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #4E4E4E;
+}
