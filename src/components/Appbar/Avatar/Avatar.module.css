@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  color: var(--violet-11);
+  color: var(--color-primario);
   font-size: 15px;
   line-height: 1;
   font-weight: 500;
@@ -54,7 +54,7 @@
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
-
+  cursor:default;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,16 +93,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--violet-11);
+  color: black;
   position: absolute;
   top: 5px;
   right: 5px;
 }
 .PopoverClose:hover {
-  background-color: var(--violet-4);
+  background-color: var(--color-primario);
+  color: white;
 }
 .PopoverClose:focus {
-  box-shadow: 0 0 0 2px var(--violet-7);
+  box-shadow: 0 0 0 2px var(--color-primario);
 }
 
 
