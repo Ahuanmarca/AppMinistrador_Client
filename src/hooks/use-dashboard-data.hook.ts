@@ -2,6 +2,7 @@ import useSWR, { mutate } from 'swr';
 import { format } from 'date-fns';
 
 const BASE_URL = 'https://appministrador-server-tob7.onrender.com';
+// const BASE_URL = 'http://localhost:8000';
 
 // Building Id (hardcoded for now) // TODO: Implement non hardcoded value
 const BUILDING_ID = '1';
