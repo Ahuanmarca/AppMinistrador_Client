@@ -2,8 +2,12 @@
 import styles from './IncidencesTable.module.css';
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import StatusButton from './StatusButton';
+import * as _ from 'lodash';
 
 function IncidencesTable({ data }) {
+
+  const incidences = _.orderBy(data, ['date'], ['desc']);
+
   return (
     <ScrollArea.Root className={styles.ScrollAreaRoot}>
       <ScrollArea.Viewport className={styles.ScrollAreaViewport}>
@@ -27,7 +31,7 @@ function IncidencesTable({ data }) {
             </tr>
           </thead>
           <tbody className={styles.TableBody}>
-            {data.map((incidence) => (
+            {incidences.map((incidence) => (
               <tr key={incidence.id}>
                 <td>{incidence.title}</td>
                 <td>{incidence.description}</td>
