@@ -20,6 +20,7 @@ function LoginForm() {
   const [showPassword, toggleShowPassword] = useToggle(false);
 
   function handleChange(e) {
+    setStatus('idle');
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   }
 
@@ -52,16 +53,22 @@ function LoginForm() {
         navigate(redirectPath);
       } else {
         delete localStorage.token;
+        delete localStorage.user;
         setStatus('error');
+        setFormValues(() => ({ username: '', password: '' }));
       }
     } catch (err) {
-      setStatus('error');
+      delete localStorage.token;
+      delete localStorage.user;
+      setStatus(() => 'error');
+      setFormValues(() => ({ username: '', password: '' }));
     }
   }
 
   return (
     <div className={styles.wrapper}>
       <Form.Root className={styles.FormRoot} onSubmit={handleSubmit}>
+      {status === 'error' && <p style={{ color: "red" }} className={styles.ServerError}>Acceso Incorrecto</p>}
         <Form.Field className={styles.FormField} name={'username'}>
           <Form.Label>Username</Form.Label>
           <Form.Control
