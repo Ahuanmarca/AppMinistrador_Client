@@ -15,23 +15,19 @@ function DashboardProvider({ children }) {
   React.useEffect(() => {
     setIntetnalState(data);
   }, [data]);
-    
+
   // @ts-expect-error - type of argument can't be assigned to type of parameter
   React.useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
-    socket.on("incidenceCreated", () => {
-      // Call your update function when a new incidence is created
+    socket.on('incidenceCreated', () => {
       updateInternalState({
-        buildingId: internalState.buildingData.id,
-        accountId: internalState.buildingData.id,
+        buildingId: internalState ? internalState.buildingData.id : 1,
+        accountId: internalState ? internalState.buildingData.id: 1,
       });
-      alert("New incidence created");
     });
-
-    // Clean up the effect
     return () => socket.disconnect();
     // eslint-disable-next-line
-  }, []); 
+  }, []);
 
   async function updateInternalState({ buildingId, accountId }) {
     const newData = await updateDashboardData({ buildingId, accountId });
