@@ -4,7 +4,7 @@ import * as ScrollArea from '@radix-ui/react-scroll-area';
 import StatusButton from './StatusButton';
 import * as _ from 'lodash';
 
-function IncidencesTable({ data }) {
+function IncidencesTable({ data, setSelectedIncidence }) {
 
   const incidences = _.orderBy(data, ['date'], ['desc']);
 
@@ -33,7 +33,13 @@ function IncidencesTable({ data }) {
           <tbody className={styles.TableBody}>
             {incidences.map((incidence) => (
               <tr key={incidence.id}>
-                <td>{incidence.title}</td>
+                <td
+                  // TODO: Improve interaction feedback
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setSelectedIncidence(incidence.id)}
+                >
+                    {incidence.title}
+                </td>
                 <td>{incidence.description}</td>
                 <td>{incidence.date}</td>
                 <td>{incidence.category}</td>

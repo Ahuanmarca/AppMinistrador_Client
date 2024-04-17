@@ -7,7 +7,7 @@ import { Circles } from 'react-loader-spinner';
 
 import IncidencesTable from './IncidencesTable';
 
-function Incidences() {
+function Incidences({ setSelectedIncidence }) {
   // @ts-expect-error data is possibly undefined
   const { data, error, isLoading } = React.useContext(DashboardContext);
 
@@ -30,6 +30,7 @@ function Incidences() {
     return <div>Error: {error.message}</div>;
   }
 
+  // Format the data to be used in the table
   const incidences: Array<Incidence> = data.buildingData.incidences.map(
     (incidence) => {
       return {
@@ -46,7 +47,7 @@ function Incidences() {
 
   return (
     <div className={styles.wrapper}>
-      <IncidencesTable data={incidences} />
+      <IncidencesTable data={incidences} setSelectedIncidence={setSelectedIncidence} />
     </div>
   );
 }
