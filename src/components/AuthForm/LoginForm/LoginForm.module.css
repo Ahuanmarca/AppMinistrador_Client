@@ -16,6 +16,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  
 }
 
 .FormField {
@@ -24,18 +25,20 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  
 }
 
 .TextInput {
   border: 1px solid #024B59;
   cursor: text;
   padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .PasswordInput {
   border: 1px solid #024B59;
   padding: 0.5rem;
- 
+  border-radius: 10px;
   display: flex;
   align-items: center;
 

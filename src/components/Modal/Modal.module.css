@@ -35,7 +35,11 @@
   background: transparent;
   border: none;
 }
-
+.closeBtn:hover{
+  background-color: rgba(255, 0, 0, 0.161);
+  border-radius: 50px;
+  
+}
 /* .wrapper {
   position: fixed;
   inset: 0;

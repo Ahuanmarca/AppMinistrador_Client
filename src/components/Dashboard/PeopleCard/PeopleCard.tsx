@@ -11,7 +11,14 @@ import GroupIcon from "./icons/GroupIcon";
 // }
 
 function PeopleCard({placeholderText, isPresident, data}) {
-
+const neighbours = data.neighbours;
+let percentage = 0;
+if (neighbours >= 35) {
+  percentage = 3
+}
+if (neighbours < 35) {
+  percentage = 7
+}
   // console.log('typeof dataneighbors',typeof data.neighboursCount);
   
 // function percentageObject(obj){
@@ -85,7 +92,7 @@ function PeopleCard({placeholderText, isPresident, data}) {
             </div>
             <div className={styles.numberWrapper}>
               <ArrowIcon></ArrowIcon>
-              <p className={styles.peopleText}>{`8% Último mes`}</p>
+              <p className={styles.peopleText}>{`${percentage}% Último mes`}</p>
             </div>
           </div>}
     </div>
