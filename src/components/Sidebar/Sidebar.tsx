@@ -31,9 +31,9 @@ function Sidebar() {
     navigate(to);
   }
 
-  function handleMenuItemClick(to: string) {
-    navigate(to);
-  }
+  // function handleMenuItemClick(to: string) {
+  //   navigate(to);
+  // }
 
   return (
     <div className={styles.container}>
@@ -61,8 +61,8 @@ function Sidebar() {
                 key={index}
                 icon={item.icon}
                 title={item.title}
-                isActive={location.pathname === item.to}
-                handleClick={() => handleMenuItemClick(item.to)}
+                // isActive={location.pathname === item.to}
+                handleClick={''}
               />
             );
           })}

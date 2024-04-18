@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { DashboardContext } from '../../../contexts/DashboardContext';
+import { useLocation } from 'react-router-dom';
 import { Incidence } from '../../../types/Incidence';
 import styles from './Incidences.module.css';
 import { formatDateTime } from './helpers';
@@ -10,7 +11,7 @@ import IncidencesTable from './IncidencesTable';
 function Incidences({ setSelectedIncidence }) {
   // @ts-expect-error data is possibly undefined
   const { data, error, isLoading } = React.useContext(DashboardContext);
-
+  const location = useLocation() as { pathname: string };
   if (isLoading) {
     return (
       <div
@@ -44,10 +45,11 @@ function Incidences({ setSelectedIncidence }) {
       };
     }
   );
-
+  const showTitle = location.pathname === '/dashboard';
   return (
     <div className={styles.wrapper}>
-      <IncidencesTable data={incidences} setSelectedIncidence={setSelectedIncidence} />
+      {showTitle && <h2 className={styles.title}>Incidencias</h2>} 
+      <IncidencesTable data={incidences} setSelectedIncidence={setSelectedIncidence}  />
     </div>
   );
 }

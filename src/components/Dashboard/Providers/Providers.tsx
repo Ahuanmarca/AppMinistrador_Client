@@ -33,7 +33,7 @@ function Providers() {
         <div className={styles.wrapper}>
           <div className={styles.cardContainer}>
           <div className={styles.spinner}> 
-          <Circles color='var(--brand-color-main)' height={50} width={50}></Circles> </div>
+          <Circles color='var(--brand-color-main)' height={50} width={50}></Circles></div>
           </div>
         </div>
         </div>
@@ -57,7 +57,7 @@ function Providers() {
     </div>
     <div className={styles.searchWrapper}>
       <h2 className={styles.searchTitle}>Nombre</h2>
-      <SearchBarProviders 
+      <SearchBarProviders
         width={'90%'}
         height={'34px'}
         placeholder={'Ej: Electricista Lumix'}
@@ -72,7 +72,7 @@ function Providers() {
                 name={provider.title}
                 img={provider.image_url}
                 phone={provider.phone_number}>
-             </ProviderCard>
+              </ProviderCard>
             ))} 
         </div>
       </div>

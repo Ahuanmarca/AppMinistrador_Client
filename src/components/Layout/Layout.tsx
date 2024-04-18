@@ -10,9 +10,9 @@ import AppbarChatApp from '../Appbar-ChatApp';
 import IncidenciasPage from '../../pages/IncidenciasPage';
 import ContabilidadPage from '../../pages/ContabilidadPage';
 import MensajesPage from '../../pages/MensajesPage';
-import ConfiguracionPage from '../../pages/ConfiguracionPage';
-import AyudaPage from '../../pages/AyudaPage';
-import PerfilPage from '../../pages/PerfilPage';
+// import ConfiguracionPage from '../../pages/ConfiguracionPage';
+// import AyudaPage from '../../pages/AyudaPage';
+// import PerfilPage from '../../pages/PerfilPage';
 
 function Layout() {
   const location = useLocation();
@@ -29,9 +29,9 @@ const showAppBar = location.pathname === '/mensajes';
           <Route path="/incidencias"    element={<IncidenciasPage />} />
           <Route path="/contabilidad"   element={<ContabilidadPage />} />
           <Route path="/mensajes"       element={<MensajesPage />} />
-          <Route path="/configuracion"  element={<ConfiguracionPage />} />
-          <Route path="/ayuda"          element={<AyudaPage />} />
-          <Route path="/perfil"         element={<PerfilPage />} />
+          <Route path="/configuracion"  element={<Dashboard />} />
+          <Route path="/ayuda"          element={<Dashboard />} />
+          <Route path="/perfil"         element={<Dashboard />} />
         </Routes>
       </main>
       <aside className={style.sidebarContainer}>
