@@ -70,7 +70,7 @@ function LoginForm() {
       <Form.Root className={styles.FormRoot} onSubmit={handleSubmit}>
       {status === 'error' && <p style={{ color: "red" }} className={styles.ServerError}>Acceso Incorrecto</p>}
         <Form.Field className={styles.FormField} name={'username'}>
-          <Form.Label>Username</Form.Label>
+          <Form.Label>Usuario</Form.Label>
           <Form.Control
             asChild
             autoComplete={"off"}
@@ -85,12 +85,12 @@ function LoginForm() {
             className={styles.ErrorMessage}
             match={'valueMissing'}
           >
-            Por favor introduzca un nombre de usuario
+            Por favor, introduce un nombre de usuario
           </Form.Message>
         </Form.Field>
 
         <Form.Field className={styles.FormField} name={'password'}>
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Contraseña</Form.Label>
           <div className={styles.PasswordInput}>
             <Form.Control
               // asChild
@@ -110,12 +110,12 @@ function LoginForm() {
             className={styles.ErrorMessage}
             match={'valueMissing'}
           >
-            Por favor introduzca una contraseña
+            Por favor, introduce una contraseña
           </Form.Message>
         </Form.Field>
 
         <Form.Submit asChild className={styles.Submit}>
-          <button type="submit">Login</button>
+          <button type="submit">Iniciar sesión</button>
         </Form.Submit>
       </Form.Root>
     </div>
