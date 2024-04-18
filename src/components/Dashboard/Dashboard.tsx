@@ -63,7 +63,7 @@ function Dashboard() {
                   <ResizeHandle />
                   <Panel>
                     {/* INCIDENCIAS TABLE */}
-                    <Incidences />
+                    <Incidences setSelectedIncidence={() => alert("TODO: Provide Event Handler")} />
                   </Panel>
                 </PanelGroup>
               </Panel>
@@ -150,7 +150,7 @@ function Dashboard() {
                 <ResizeHandle />
                 <Panel>
                   {/* INCIDENCIAS TABLE */}
-                  <Incidences />
+                  <Incidences setSelectedIncidence={() => alert('TODO: Implement Event Handler')}/>
                 </Panel>
               </PanelGroup>
             </Panel>

@@ -1,4 +1,4 @@
-// import * as React from 'react';
+import * as React from 'react';
 import Incidences from '../../components/Dashboard/Incidences';
 import styles from './IncidenciasPage.module.css';
 import { PanelGroup, Panel } from 'react-resizable-panels';
@@ -8,34 +8,34 @@ import ResizeHandle from '../../components/Dashboard/ResizeHandle';
 import IncidentIcon from '../../components/Sidebar/icons/IncidentIcon';
 import useToggle from '../../hooks/use-toggle.hook';
 import Modal from '../../components/Modal';
+import IncidenceDetails from '../../components/IncidenceDetails';
 import ReportIncidence from '../../components/ReportIncidence';
 
 function IncidenciasPage() {
-  // const [selectedIncidence, setSelectedIncidence] = React.useState(0);
   const [isReportModalVisible, toggleIsReportModalVisible] = useToggle(false);
-
+  const [selectedIncidence, setSelectedIncidence] = React.useState("");
 
   return (
     <div className={styles.Wrapper}>
-      <h2>Incidencias</h2>
       <PanelGroup direction={'horizontal'}>
         <Panel defaultSize={60} className={styles.IncidencesPanel}>
-          <Incidences />
+          <h2>Incidencias</h2>
+          <Incidences setSelectedIncidence={setSelectedIncidence} />
         </Panel>
         <ResizeHandle />
         <Panel defaultSize={40}>
           <div style={{ height: "100%" }}>
-            <div style={{ height: '70%' }}>
+            <div style={{ height: '80%', maxHeight: '80%' }}>
               <div className={styles.PanelContent}>
-                <div className="flex-center-within">Details</div>
+                <IncidenceDetails selectedIncidence={selectedIncidence} />
               </div>
             </div>
-            <div style={{ height: '30%' }}>
+            <div style={{ height: '15%' }}>
               <div className={styles.PanelContent}>
                 <div className={styles.TabGroup}>
                   <button
                     className={styles.ReportButton}
-                    // @ts-expect-error -- Type 'boolean | (() => void)' is not assignable to type 'MouseEventHandler<HTMLButtonElement>'. Type 'boolean is not assignable to type 'MouseEventHandler<HTMLButtonElement>'.ts(2322)
+                    // @ts-expect-error -- Type 'boolean | (() => void)' is not assignable to type '() => void'.
                     onClick={toggleIsReportModalVisible}
                   >
                     <IncidentIcon></IncidentIcon>

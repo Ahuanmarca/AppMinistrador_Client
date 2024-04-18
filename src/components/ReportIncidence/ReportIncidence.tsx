@@ -61,8 +61,10 @@ function ReportIncidence({ handleDismiss }) {
         }),
       });
       const json = await response.json();
-      
+
+      // TODO: Check for errors on the response / json
       console.log({ createdIncidence: json });
+      
       updateDashboardData({ buildingId: buildingId, accountId: buildingId});
       handleDismiss();
       setStatus('success');
