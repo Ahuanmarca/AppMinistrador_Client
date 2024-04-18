@@ -48,12 +48,8 @@ function Incidences({ setSelectedIncidence }) {
   const showTitle = location.pathname === '/dashboard';
   return (
     <div className={styles.wrapper}>
-<<<<<<< HEAD
       {showTitle && <h2 className={styles.title}>Incidencias</h2>} 
-      <IncidencesTable data={incidences} />
-=======
-      <IncidencesTable data={incidences} setSelectedIncidence={setSelectedIncidence} />
->>>>>>> develop
+      <IncidencesTable data={incidences} setSelectedIncidence={setSelectedIncidence}  />
     </div>
   );
 }

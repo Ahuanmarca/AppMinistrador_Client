@@ -4,8 +4,6 @@
   border-radius: 12px;
   cursor: default;
   border: 1px solid var(--color-dashboard-panel-border);
-  /*DREA DEBUG*/
-  /* border: 1px solid red; */
   padding: 10px 24px 38px 24px;
 }
 
