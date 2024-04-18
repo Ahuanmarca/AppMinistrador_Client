@@ -17,6 +17,16 @@ const CATEGORIES = [
   'Reparaciones',
 ];
 
+const IMAGES = {
+  Ascensor: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/ascensor.jpeg?alt=media&token=ce7c27eb-6250-41a1-909a-e31a2bff4431",
+  Calefacción: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/calefaccion.jpeg?alt=media&token=8bbe513f-4254-4674-b8ab-1a31322d06ce",
+  Comunidad: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/comunidad.jpeg?alt=media&token=e269123b-5738-412f-8a9a-21107dbedfe3",
+  Electricidad: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/electricidad.jpeg?alt=media&token=fcfd39ca-8805-4f6d-8a56-aed960413cc4",
+  Escalera: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/escalera.jpeg?alt=media&token=7798b336-253f-4f9d-b158-d5d319eee59b",
+  Limpieza: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/limpieza.jpeg?alt=media&token=9ea821b0-2afa-4989-be49-b89a4304aafa",
+  Mantenimiento: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/mantenimiento.jpeg?alt=media&token=751c0d07-0b6a-4380-8871-3b950f3d3f1e",
+  Reparaciones: "https://firebasestorage.googleapis.com/v0/b/appministrador-2024.appspot.com/o/reparaciones.jpeg?alt=media&token=bd09fff2-8f4c-4e84-b221-5a1526fe04a8",
+}
 
 function ReportIncidence({ handleDismiss }) {
   // @ts-expect-error - What is the type of the context value?
@@ -54,7 +64,7 @@ function ReportIncidence({ handleDismiss }) {
         body: JSON.stringify({
           title: formValues.title,
           description: formValues.description,
-          image_url: 'https://picsum.photos/200/300',
+          image_url: IMAGES[formValues.category] || 'https://picsum.photos/200/300',
           user_dni: user.dni,
           building_id: 1,
           category: formValues.category,
