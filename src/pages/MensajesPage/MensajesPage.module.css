@@ -50,6 +50,7 @@ input {
 .signIn {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .signIn > img {
   height: 30px;
@@ -74,6 +75,7 @@ input {
   /* margin-top: 40px; */
   /* padding-top: 50px; */
   color: whitesmoke;
+  cursor:default;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
@@ -89,6 +91,7 @@ input {
   /* background-color: royalblue; */
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  cursor: default;
 }
 .chatBubble {
   border-radius: 20px 20px 20px 0;

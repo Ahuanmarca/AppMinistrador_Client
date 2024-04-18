@@ -79,7 +79,7 @@ function StatusButton({ id, status }) {
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content className={styles.DropdownMenuContent} sideOffset={5}>
-          <DropdownMenu.Label className={styles.DropdownMenuLabel}>Actualizar</DropdownMenu.Label>
+          <DropdownMenu.Label className={styles.DropdownMenuLabel}>Actualizar estado</DropdownMenu.Label>
           <DropdownMenu.Separator className={styles.DropdownMenuSeparator} />
 
           <DropdownMenu.RadioGroup onValueChange={handleStatusChange} value={status}>

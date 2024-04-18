@@ -17,9 +17,9 @@ function Avatar() {
     ? `${UNSPLASH_BASE_URL}${user.portrait_url}${UNSPLASH_QUERY_PARAM}`
     : fallbackImageUrl;
 
-  const handleClick = () => {
-    navigate('/perfil');
-  };
+  // const handleClick = () => {
+  //   navigate('/perfil');
+  // };
 
   function handleCloseSessionClick() {
     localStorage.removeItem('user');
@@ -48,7 +48,7 @@ function Avatar() {
           </p>
           <button
             style={{ width: "105px"}}
-            onClick={handleClick}
+            // onClick={handleClick}
             className={'generic-green-button'}
           >
             Ver Perfil

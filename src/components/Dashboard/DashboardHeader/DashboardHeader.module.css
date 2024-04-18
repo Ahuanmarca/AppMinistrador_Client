@@ -4,7 +4,8 @@ h1 {
 .title{
 color:var(--black);
 font-family: var(--font-Roboto);
-font-size: 28px;}
+font-size: 28px;
+cursor: default;}
 
 .container{
   width: 100%;

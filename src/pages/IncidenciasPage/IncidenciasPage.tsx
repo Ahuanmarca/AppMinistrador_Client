@@ -18,14 +18,15 @@ function IncidenciasPage() {
   return (
     <div className={styles.Wrapper}>
       <PanelGroup direction={'horizontal'}>
-        <Panel defaultSize={60}>
-          <h2>Incidencias</h2>
+          {/* <h2>Incidencias</h2> */}
+        <Panel defaultSize={60} className={styles.IncidencesPanel}>
           <Incidences setSelectedIncidence={setSelectedIncidence} />
         </Panel>
         <ResizeHandle />
         <Panel defaultSize={40}>
-          <div style={{ height: "100%" }}>
-            <div style={{ height: '80%', maxHeight: '80%' }}>
+          <div className={styles.container}>
+            {/* <div style={{ height: '80%', maxHeight: '80%' }}> */}
+            <div>
               <div className={styles.PanelContent}>
                 <IncidenceDetails selectedIncidence={selectedIncidence} />
               </div>

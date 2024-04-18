@@ -1,6 +1,6 @@
 // import * as React from 'react';
 
-function IncidentIcon({ color = "#024B59" }) {
+function IncidentIcon({ color = "white" }) {
   return (
     <div>
       <svg
