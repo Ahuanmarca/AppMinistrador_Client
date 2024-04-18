@@ -7,7 +7,17 @@
 
 The AppMinistrador App is our capstone project for the Full Stack Developer Bootcamp at EDEM, powered by The Bridge, in Valencia, Spain. Alongside the Cybersecurity team, we have embraced the challenge proposed by the Colegio de Administradores de Fincas de Valencia y Castellón. The project's MVP features a dashboard providing fundamental information on estate management.
 
-  
+  ##  Features
+  1.  **Authentication:**  Implemented for secure user authentication.
+  2. **Chat:** Real-time communication with Firebase.
+  3. **Incidences:** Instant update on incidences with websockets. 
+  4.  **HTTP Requests**: Incorporates SWR for efficient and promise-based HTTP requests to connect the frontend and backend.
+  5.  **SPA:**  Developed as a single-page application (SPA) to ensure smooth user interaction without page reloads.
+6.  **Radix UI:**  Integrated Radix UI components to enhance the UI and user experience.
+7.  **Resizable Panels:**  Developed resizable panels for personal user customization.
+8.  **React Router:**  Implemented React Router for seamless navigation within the SPA.
+9.  **CRUD Operations:**  Enabled Create, Read, Update, and Delete operations for both incidences and communities.
+
 
 ##  Technologies
 
@@ -116,32 +126,43 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine befo
 
 <hr>
 
+##  Deployed app on Vercel
+
+You can access our app with this link https://app-ministrador-client.vercel.app/
+In order to Log In and test the app you can use these credentials: 
+```bash
+
+	Usuario: user
+	Contraseña: user
+
+``` 
+
   ## Developed by
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
     <div>
-        <p align="center">Andrea Mir</p>
-        <p align="center">
-        <a href="mailto:renzobelon@gmail.com">
-            <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"  target="_blank">
-        </a>
-        <a href="https://www.linkedin.com/in/andreamirolba"  target="_blank">
-            <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"  target="_blank">
-        </a>
-        <a href="https://github.com/andreamir/">
-            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
-        </a>
-    </div>
-    <div>
         <p align="center">Renzo Belon</p>
         <p align="center">
-        <a href="mailto:amirolba@gmail.com">
-            <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"  target="_blank">
+        <a href="mailto:renzobelon@gmail.com">
+            <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"  target="_blank">
         </a>
         <a href="https://www.linkedin.com/in/renzo-belon-ortega-395623233"  target="_blank">
             <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"  target="_blank">
         </a>
         <a href="https://github.com/ahuanmarca/">
+            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+        </a>
+    </div>
+    <div>
+        <p align="center">Andrea Mir</p>
+        <p align="center">
+        <a href="mailto:amirolba@gmail.com">
+            <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"  target="_blank">
+        </a>
+        <a href="https://www.linkedin.com/in/andreamirolba"  target="_blank">
+            <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"  target="_blank">
+        </a>
+        <a href="https://github.com/andreamir/">
             <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
         </a>
     </div>
