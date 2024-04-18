@@ -9,6 +9,7 @@ import Basic from '../../pages/TestPageRenzo/TanStack/Basic';
 import Incidences from '../../pages/TestPageRenzo/TanStack/Incidences';
 import Sorting from '../../pages/TestPageRenzo/TanStack/Sorting';
 import AuthForm from '../AuthForm';
+import ReportIncidence from '../ReportIncidence';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <DashboardProvider>
         <Routes>
           <Route path="/login" element={<AuthForm />} />
+          <Route path="/mobile" element={<ReportIncidence handleDismiss={() => console.log("Reported")}/>} />
           <Route path="/tester">
             <Route path="/tester/basic" element={<Basic />} />
             <Route path="/tester/incidences" element={<Incidences />} />

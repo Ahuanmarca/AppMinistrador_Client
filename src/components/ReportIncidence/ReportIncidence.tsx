@@ -37,7 +37,7 @@ function ReportIncidence({ handleDismiss }) {
 
   const token = localStorage.token;
   const user = JSON.parse(localStorage.user);
-  const buildingId = data.buildingData.id;
+  const buildingId = data?.buildingData.id || 1;
 
   async function handleSubmit(e) {
     e.preventDefault();
