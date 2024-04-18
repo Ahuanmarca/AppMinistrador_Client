@@ -41,7 +41,7 @@ button {
 .DropdownMenuSubTrigger {
   font-size: 13px;
   line-height: 1;
-  color: var(--violet-11);
+  color: black;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -67,8 +67,8 @@ button {
 .DropdownMenuCheckboxItem[data-highlighted],
 .DropdownMenuRadioItem[data-highlighted],
 .DropdownMenuSubTrigger[data-highlighted] {
-  background-color: var(--violet-9);
-  color: var(--violet-1);
+  background-color: var(--color-primario);
+  color: whitesmoke;
 }
 
 .DropdownMenuLabel {
@@ -80,7 +80,7 @@ button {
 
 .DropdownMenuSeparator {
   height: 1px;
-  background-color: var(--violet-6);
+  background-color: var(--cashflow-expenses);
   margin: 5px;
 }
 
