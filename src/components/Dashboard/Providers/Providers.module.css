@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content:center;
+  cursor: default;
   /* background-color: rgba(111, 0, 145, 0.332); */
   /* background-color: darkgrey; */
   /* outline: none; */

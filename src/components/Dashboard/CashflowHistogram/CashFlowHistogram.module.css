@@ -1,5 +1,6 @@
 .container{
   width: 97.2%;
+  cursor: default;
   max-width: 1400px;
   height: 100%;
   display: flex;

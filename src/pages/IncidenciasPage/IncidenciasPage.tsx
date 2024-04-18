@@ -19,7 +19,7 @@ function IncidenciasPage() {
     <div className={styles.Wrapper}>
       <h2>Incidencias</h2>
       <PanelGroup direction={'horizontal'}>
-        <Panel defaultSize={60}>
+        <Panel defaultSize={60} className={styles.IncidencesPanel}>
           <Incidences />
         </Panel>
         <ResizeHandle />

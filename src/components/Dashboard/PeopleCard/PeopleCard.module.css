@@ -14,7 +14,8 @@
   padding: 10px;
   flex-direction: column;
   background-color: #ffffff;
-  box-shadow: 2px 10px 17px 0px #efeeee;}
+  box-shadow: 2px 10px 17px 0px #efeeee;
+  cursor: default}
 
   .title{
     color:var(--grey);
