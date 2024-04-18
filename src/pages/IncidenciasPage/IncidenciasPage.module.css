@@ -15,17 +15,22 @@
 .PanelContent {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--color-dashboard-panel-border);
+  /* border-radius: 12px;
+  border: 1px solid var(--color-dashboard-panel-border); */
   padding: 28px 24px 38px 24px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .TabGroup{
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center; 
+  
 }
 
 .ReportButton {
