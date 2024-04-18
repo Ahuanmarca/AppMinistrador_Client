@@ -43,6 +43,9 @@
 
   /* Colors copied directly from "VERSION FINAL APP" file */
   --color-dashboard-panel-border: #eceef6; /* Copied from the border of a dashboard section */
+  /*Hover colors*/
+  --color-primario-hover: #013742;
+  --color-principal-hover: #8b1327;
 }
 
 input {
@@ -71,6 +74,8 @@ input {
   font-size: 0.9rem;
   text-align: center;
 }
+.generic-green-button:hover {
+  background-color:var(--color-primario-hover)} 
 
 .generic-red-button {
   cursor: pointer;
@@ -81,3 +86,6 @@ input {
   font-size: 0.9rem;
   text-align: center;
 }
+
+.generic-red-button:hover {
+  background-color: var(--color-principal-hover)} 
