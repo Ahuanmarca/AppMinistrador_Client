@@ -45,12 +45,12 @@ function StatusButton({ id, status }) {
           status: e,
         }),
       });
-      const json = await response.json();
-      
-      console.log({ updatedIncidence: json});
-      updateDashboardData({ buildingId: buildingId, accountId: buildingId });
+      await response.json(); // I don't need the response, just the status code?
+
+      updateDashboardData({ buildingId: buildingId, accountId: buildingId }); // Manually trigger a re-fetch by swr
       setButtonCondition('success');
     } catch (err) {
+      // TODO: Handle error in a graceful way
       setButtonCondition('error');
     }
   }

@@ -30,7 +30,7 @@ const IMAGES = {
 
 function ReportIncidence({ handleDismiss }) {
   // @ts-expect-error - What is the type of the context value?
-  const { data, updateDashboardData } = React.useContext(DashboardContext);
+  const { data, error, isLoading, updateDashboardData } = React.useContext(DashboardContext);
 
   const [formValues, setFormValues] = React.useState(() => ({
     title: '',
@@ -41,13 +41,16 @@ function ReportIncidence({ handleDismiss }) {
   type Status = 'idle' | 'loading' | 'success' | 'error';
   const [status, setStatus] = React.useState<Status>('idle');
 
+  if (isLoading) { return <div>Loading...</div>; }
+  if (error) { return <div>Error!</div>; }
+
   function handleChange(e) {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   }
 
   const token = localStorage.token;
   const user = JSON.parse(localStorage.user);
-  const buildingId = data?.buildingData.id || 1;
+  const buildingId = data.buildingData.id;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -70,20 +73,15 @@ function ReportIncidence({ handleDismiss }) {
           category: formValues.category,
         }),
       });
-      const json = await response.json();
-
       // TODO: Check for errors on the response / json
-      console.log({ createdIncidence: json });
-      
-      updateDashboardData({ buildingId: buildingId, accountId: buildingId});
+      await response.json(); // I don't need the response, just the status code?
+
+      updateDashboardData({ buildingId: buildingId, accountId: buildingId}); // Manually trigger a re-fetch by swr
       handleDismiss();
       setStatus('success');
-
     } catch (err) {
       setStatus('error');
     }
-        
-
     setFormValues({ title: '', description: '', category: '' });
   }
 

@@ -18,7 +18,7 @@ const monthNames = {
 
 function CustomTooltipCashFlow({ active, payload, label }) {
   if (active && payload && payload.length){
-    console.log('label:', label);
+    // console.log('label:', label);
     
     const monthName = monthNames[label]; 
 

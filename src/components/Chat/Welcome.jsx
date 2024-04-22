@@ -9,10 +9,7 @@ import {
 
 const Welcome = () => {
   const googleSignIn = async () => {
-    // const provider = new GoogleAuthProvider();
-    // signInWithRedirect(auth, provider);
-    const userCred = await signInWithPopup(auth, new GoogleAuthProvider());
-    console.log(userCred);
+    await signInWithPopup(auth, new GoogleAuthProvider());
   };
 
   return (

@@ -30,7 +30,7 @@ function App() {
               alignItems: "center",
             }}
           >
-            <ReportIncidence handleDismiss={() => console.log("Reported")}/>
+            <ReportIncidence handleDismiss={() => alert("Close button without dismiss callback")}/>
           </div>
         
         } />

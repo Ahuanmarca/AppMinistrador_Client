@@ -25,7 +25,7 @@ const SendMessage = ({scroll}) => {
   };
   
   return (
-    <form className={styles.sendMessage} onSubmit={(event) => sendMessage(event)} autocomplete="off">
+    <form className={styles.sendMessage} onSubmit={(event) => sendMessage(event)} autoComplete="off">
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>

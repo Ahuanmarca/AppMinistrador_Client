@@ -62,7 +62,7 @@ function Sidebar() {
                 icon={item.icon}
                 title={item.title}
                 // isActive={location.pathname === item.to}
-                handleClick={''}
+                handleClick={() => alert('TODO: Implement this page')}
               />
             );
           })}
